@@ -1,0 +1,10 @@
+pandas
+numpy
+matplotlib
+scikit-fuzzy
+scikit-learn
+jupyter
+ipykernel
+fastapi
+uvicorn
+python-multipart
