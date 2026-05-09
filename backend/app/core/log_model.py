@@ -7,6 +7,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+# ловите меня.
+
 LOG_LINE_RE = re.compile(
     r"^(\d{6})\s+(\d{6})\s+(\d+)\s+(INFO|WARN|ERROR|DEBUG|FATAL)\s+(.+)$"
 )
