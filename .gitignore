@@ -25,9 +25,13 @@ frontend/.vite/
 
 # Logs and temporary files
 *.log
+*.db
+*.sqlite
+*.sqlite3
 logs/
 tmp/
 temp/
+backend/storage/
 
 # Local output artifacts
 outputs/

@@ -11,15 +11,20 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 
+from app.api.logs import create_router as create_logs_router
 from app.core.log_model import analyze_path, analyze_text, build_summary, dataframe_to_csv_buffer, serialize_rows
+from app.db import get_database_path, init_db
+from app.db.repository import get_database_overview
+from app.recommend import pg_store as _pg_store
+from app.recommend.router import router as recommend_router
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT_DIR / "data"
 
-app = FastAPI(title="LogFuzzy API", version="0.1.0")
+app = FastAPI(title="LogFuzzy API", version="0.2.0")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -64,9 +69,23 @@ def create_analysis(df: pd.DataFrame, source_name: str) -> dict:
     }
 
 
+@app.on_event("startup")
+def startup() -> None:
+    init_db()
+    _pg_store.init_pg()
+
+
+app.include_router(create_logs_router(DATA_DIR))
+app.include_router(recommend_router)
+
+
 @app.get("/health")
 def healthcheck() -> dict:
-    return {"status": "ok"}
+    return {
+        "status": "ok",
+        "db_path": str(get_database_path()),
+        "database": get_database_overview(),
+    }
 
 
 @app.get("/datasets")
@@ -148,6 +167,7 @@ def get_rows(
         filtered = filtered[
             filtered["message"].astype(str).str.contains(search, case=False, na=False)
             | filtered["component"].astype(str).str.contains(search, case=False, na=False)
+            | filtered["raw_text"].astype(str).str.contains(search, case=False, na=False)
         ]
 
     ascending = sort_order == "asc"

@@ -7,8 +7,6 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-# ловите меня.
-
 LOG_LINE_RE = re.compile(
     r"^(\d{6})\s+(\d{6})\s+(\d+)\s+(INFO|WARN|ERROR|DEBUG|FATAL)\s+(.+)$"
 )
@@ -21,6 +19,8 @@ BAD_MSG_RE = re.compile(
     r"exception|failed|failure|error|corrupt|timeout|denied|unavailable|abort",
     re.IGNORECASE,
 )
+NUMBER_RE = re.compile(r"\b\d+\b")
+WHITESPACE_RE = re.compile(r"\s+")
 
 EVENT_PATTERNS = [
     ("warn_exception_serving", r"Got exception while serving"),
@@ -81,10 +81,21 @@ OUT_MED = trimf_vec(Z, (0.25, 0.5, 0.75))
 OUT_HIGH = trimf_vec(Z, (0.55, 1.0, 1.0))
 
 
+def build_error_signature(message: str | None) -> str:
+    """Normalize volatile values so repeated errors can be grouped."""
+    text = str(message or "").strip().lower()
+    text = re.sub(BLOCK_RE, "blk_<id>", text)
+    text = re.sub(ANY_IP_RE, "/<ip>", text)
+    text = re.sub(NUMBER_RE, "<num>", text)
+    text = WHITESPACE_RE.sub(" ", text)
+    return text[:500] or "empty"
+
+
 def parse_log_line(line: str) -> dict:
     match = LOG_LINE_RE.match(line)
     if not match:
         return {
+            "raw_text": line,
             "date": None,
             "time": None,
             "pid": None,
@@ -105,6 +116,7 @@ def parse_log_line(line: str) -> dict:
             component, message = rest, ""
 
     return {
+        "raw_text": line,
         "date": date,
         "time": time,
         "pid": int(pid),
@@ -125,16 +137,28 @@ def classify_event(message: str | None) -> str:
 
 
 def to_timestamp(date_yyMMdd: str | None, time_hhmmss: str | None) -> pd.Timestamp | pd.NaT:
+    # Be defensive: inputs may be None, NaN (float) or non-standard strings.
     if not date_yyMMdd or not time_hhmmss:
         return pd.NaT
 
-    yy = int(date_yyMMdd[:2])
-    mm = int(date_yyMMdd[2:4])
-    dd = int(date_yyMMdd[4:6])
-    hh = int(time_hhmmss[:2])
-    minute = int(time_hhmmss[2:4])
-    ss = int(time_hhmmss[4:6])
-    return pd.Timestamp(year=2000 + yy, month=mm, day=dd, hour=hh, minute=minute, second=ss)
+    try:
+        s_date = str(date_yyMMdd)
+        s_time = str(time_hhmmss)
+        if len(s_date) < 6 or len(s_time) < 6:
+            return pd.NaT
+        # ensure we have digits where expected
+        if not (s_date[:6].isdigit() and s_time[:6].isdigit()):
+            return pd.NaT
+
+        yy = int(s_date[:2])
+        mm = int(s_date[2:4])
+        dd = int(s_date[4:6])
+        hh = int(s_time[:2])
+        minute = int(s_time[2:4])
+        ss = int(s_time[4:6])
+        return pd.Timestamp(year=2000 + yy, month=mm, day=dd, hour=hh, minute=minute, second=ss)
+    except Exception:
+        return pd.NaT
 
 
 def criticality_mamdani(x_level: float, x_kb: float, x_lex: float, x_ctx: float, x_param: float) -> float:
@@ -207,6 +231,7 @@ def analyze_lines(lines: list[str]) -> pd.DataFrame:
     df["dest_ip"] = df["message"].str.extract(DEST_IP_RE, expand=False)
     df["any_ip"] = df["message"].str.extract(ANY_IP_RE, expand=False)
     df["event_type"] = df["message"].apply(classify_event)
+    df["signature"] = df["message"].apply(build_error_signature)
 
     df["x_level"] = df["level"].map(LEVEL_SCORE).fillna(0.2).clip(0, 1)
     df["x_kb_base"] = df["event_type"].map(KB_BASE_SEVERITY).fillna(0.15).clip(0, 1)
@@ -237,7 +262,10 @@ def analyze_path(path: Path) -> pd.DataFrame:
 
 def serialize_rows(df: pd.DataFrame) -> list[dict]:
     export_columns = [
+        "id",
         "row_id",
+        "line_number",
+        "source_name",
         "ts",
         "date",
         "time",
@@ -250,28 +278,20 @@ def serialize_rows(df: pd.DataFrame) -> list[dict]:
         "x_lex",
         "x_ctx",
         "x_param",
+        "signature",
+        "raw_text",
         "message",
     ]
     rows: list[dict] = []
-    for row in df[export_columns].itertuples(index=False):
-        rows.append(
-            {
-                "row_id": row.row_id,
-                "ts": None if pd.isna(row.ts) else row.ts.isoformat(sep=" "),
-                "date": row.date,
-                "time": row.time,
-                "level": row.level,
-                "component": row.component,
-                "event_type": row.event_type,
-                "criticality": round(float(row.criticality), 4),
-                "x_level": round(float(row.x_level), 4),
-                "x_kb_base": round(float(row.x_kb_base), 4),
-                "x_lex": round(float(row.x_lex), 4),
-                "x_ctx": round(float(row.x_ctx), 4),
-                "x_param": round(float(row.x_param), 4),
-                "message": row.message,
-            }
-        )
+    available_columns = [column for column in export_columns if column in df.columns]
+    for record in df[available_columns].to_dict(orient="records"):
+        row = dict(record)
+        if "ts" in row:
+            row["ts"] = None if pd.isna(row["ts"]) else row["ts"].isoformat(sep=" ")
+        for key in ["criticality", "x_level", "x_kb_base", "x_lex", "x_ctx", "x_param"]:
+            if key in row:
+                row[key] = round(float(row[key]), 4)
+        rows.append(row)
     return rows
 
 
@@ -289,6 +309,8 @@ def dataframe_to_csv_buffer(df: pd.DataFrame) -> io.StringIO:
         "x_lex",
         "x_ctx",
         "x_param",
+        "signature",
+        "raw_text",
         "message",
     ]
     csv_buffer = io.StringIO()

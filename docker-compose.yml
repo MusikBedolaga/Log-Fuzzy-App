@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: logfuzzy-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: logfuzzy
+      POSTGRES_USER: logfuzzy
+      POSTGRES_PASSWORD: logfuzzy
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U logfuzzy -d logfuzzy"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  pgdata:
