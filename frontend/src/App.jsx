@@ -4,6 +4,193 @@ const DEFAULT_API_BASE = "http://127.0.0.1:8000";
 const ANALYSIS_PAGE_SIZE = 100;
 const DB_PAGE_SIZE = 50;
 
+const I18N = {
+  ru: {
+    appSubtitle: "База логов, поиск и fuzzy-анализ критичности",
+    database: "База логов",
+    analysis: "Анализ файла",
+    apiUrl: "API URL",
+    refreshConnection: "Обновить подключение",
+    databasePanel: "База данных",
+    logs: "Логов",
+    sources: "Источников",
+    critical: "Критичных",
+    importData: "Импорт data",
+    syncing: "Синхронизация...",
+    force: "Форсировать",
+    analysisSource: "Источник анализа",
+    dataset: "Датасет",
+    file: "Файл",
+    text: "Текст",
+    dataFile: "Файл из data",
+    localFile: "Локальный файл",
+    logText: "Текст логов",
+    runAnalysis: "Запустить анализ",
+    analyzing: "Анализ...",
+    aiRecommendations: "AI-рекомендации",
+    indexed: "В индексе",
+    noConnection: "нет связи",
+    indexLogs: "Индексировать",
+    indexing: "Индексация...",
+    refreshStatus: "Обновить статус",
+    importedSources: "Импортированные источники",
+    importedNotice: ({ imported, skipped, errors }) => `Импортировано: ${imported}, пропущено: ${skipped}, ошибок: ${errors}`,
+    logUpdated: "Лог обновлен",
+    logCreated: "Лог создан",
+    deleteConfirm: "Удалить выбранный лог из базы данных?",
+    logDeleted: "Лог удален",
+    chooseFile: "Выбери файл для загрузки",
+    found: "Найдено",
+    warn: "WARN",
+    errorFatal: "ERROR/FATAL",
+    avgCriticality: "Средняя criticality",
+    max: "max",
+    overview: "Обзор",
+    eventTop: "Топ событий",
+    logLevels: "Уровни логов",
+    noData: "Нет данных",
+    filters: "Фильтры",
+    advancedFilters: "Расширенные фильтры",
+    searchPlaceholder: "Поиск по сообщению, компоненту, сигнатуре",
+    allSources: "Все источники",
+    allLevels: "Все уровни",
+    allEvents: "Все события",
+    component: "Component",
+    minCriticality: "Min criticality",
+    onlyCritical: "Только критичные",
+    apply: "Применить",
+    shown: (shown, total) => `Показано ${shown} из ${total}`,
+    loading: "Загрузка...",
+    back: "Назад",
+    forward: "Вперед",
+    source: "Источник",
+    event: "event",
+    criticality: "criticality",
+    message: "message",
+    newLog: "Новый лог",
+    new: "Новый",
+    rawText: "Raw text",
+    saving: "Сохранение...",
+    update: "Обновить",
+    create: "Создать",
+    delete: "Удалить",
+    details: "Детали",
+    signature: "Сигнатура",
+    row: "Строка",
+    similar: "Похожие",
+    searching: "Поиск...",
+    advice: "Совет",
+    noIndexData: "Нет данных — сначала запустите индексацию",
+    problemComponents: "Проблемные компоненты",
+    repeatedErrors: "Повторяющиеся ошибки",
+    criticalRows: "Критичные записи",
+    times: "раз",
+    criticalShort: "крит.",
+    runAnalysisEmpty: "Запусти анализ датасета, файла или ручного текста",
+    rows: "Строк",
+    parseOk: "Parse OK",
+    distribution: "Распределение criticality",
+    summary: "Сводка",
+    events: "События",
+    downloadCsv: "Скачать CSV",
+    results: "Результаты",
+    compactMode: "Сводка",
+    fullMode: "Аналитика",
+  },
+  en: {
+    appSubtitle: "Log database, search, and fuzzy criticality analysis",
+    database: "Log DB",
+    analysis: "File analysis",
+    apiUrl: "API URL",
+    refreshConnection: "Refresh connection",
+    databasePanel: "Database",
+    logs: "Logs",
+    sources: "Sources",
+    critical: "Critical",
+    importData: "Import data",
+    syncing: "Syncing...",
+    force: "Force",
+    analysisSource: "Analysis source",
+    dataset: "Dataset",
+    file: "File",
+    text: "Text",
+    dataFile: "File from data",
+    localFile: "Local file",
+    logText: "Log text",
+    runAnalysis: "Run analysis",
+    analyzing: "Analyzing...",
+    aiRecommendations: "AI recommendations",
+    indexed: "Indexed",
+    noConnection: "no connection",
+    indexLogs: "Index logs",
+    indexing: "Indexing...",
+    refreshStatus: "Refresh status",
+    importedSources: "Imported sources",
+    importedNotice: ({ imported, skipped, errors }) => `Imported: ${imported}, skipped: ${skipped}, errors: ${errors}`,
+    logUpdated: "Log updated",
+    logCreated: "Log created",
+    deleteConfirm: "Delete the selected log from the database?",
+    logDeleted: "Log deleted",
+    chooseFile: "Choose a file to upload",
+    found: "Found",
+    warn: "WARN",
+    errorFatal: "ERROR/FATAL",
+    avgCriticality: "Avg criticality",
+    max: "max",
+    overview: "Overview",
+    eventTop: "Top events",
+    logLevels: "Log levels",
+    noData: "No data",
+    filters: "Filters",
+    advancedFilters: "Advanced filters",
+    searchPlaceholder: "Search message, component, signature",
+    allSources: "All sources",
+    allLevels: "All levels",
+    allEvents: "All events",
+    component: "Component",
+    minCriticality: "Min criticality",
+    onlyCritical: "Critical only",
+    apply: "Apply",
+    shown: (shown, total) => `Showing ${shown} of ${total}`,
+    loading: "Loading...",
+    back: "Back",
+    forward: "Next",
+    source: "Source",
+    event: "event",
+    criticality: "criticality",
+    message: "message",
+    newLog: "New log",
+    new: "New",
+    rawText: "Raw text",
+    saving: "Saving...",
+    update: "Update",
+    create: "Create",
+    delete: "Delete",
+    details: "Details",
+    signature: "Signature",
+    row: "Row",
+    similar: "Similar",
+    searching: "Searching...",
+    advice: "Advice",
+    noIndexData: "No data yet — run indexing first",
+    problemComponents: "Problem components",
+    repeatedErrors: "Repeated errors",
+    criticalRows: "Critical rows",
+    times: "times",
+    criticalShort: "crit.",
+    runAnalysisEmpty: "Run dataset, file, or manual text analysis",
+    rows: "Rows",
+    parseOk: "Parse OK",
+    distribution: "Criticality distribution",
+    summary: "Summary",
+    events: "Events",
+    downloadCsv: "Download CSV",
+    results: "Results",
+    compactMode: "Summary",
+    fullMode: "Analytics",
+  },
+};
+
 function formatBytes(bytes) {
   if (!Number.isFinite(bytes)) return "0 B";
   if (bytes < 1024) return `${bytes} B`;
@@ -126,6 +313,7 @@ function EmptyState({ title }) {
 export default function App() {
   const [apiBase, setApiBase] = useState(DEFAULT_API_BASE);
   const [activeView, setActiveView] = useState("database");
+  const [locale, setLocale] = useState(() => localStorage.getItem("logfuzzy_locale") || "ru");
   const [notice, setNotice] = useState("");
   const [error, setError] = useState("");
 
@@ -175,6 +363,7 @@ export default function App() {
   const [loadingAnalysisRows, setLoadingAnalysisRows] = useState(false);
 
   const cleanApiBase = useMemo(() => apiBase.replace(/\/+$/, ""), [apiBase]);
+  const t = I18N[locale] || I18N.ru;
 
   
 
@@ -182,6 +371,11 @@ export default function App() {
     void refreshInitialData();
     void fetchRecStatus();
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("logfuzzy_locale", locale);
+    document.documentElement.lang = locale;
+  }, [locale]);
 
   async function fetchRecStatus() {
     try {
@@ -200,7 +394,7 @@ export default function App() {
       const resp = await fetch(`${cleanApiBase}/recommend/index-all?limit=500`, { method: "POST" });
       const data = await resp.json().catch(() => ({}));
       if (!resp.ok) throw new Error(data.detail || `HTTP ${resp.status}`);
-      setNotice(data.message || "Индексация запущена в фоне");
+      setNotice(data.message || t.indexing);
       setTimeout(() => void fetchRecStatus(), 3000);
     } catch (err) {
       setError(err.message);
@@ -311,9 +505,7 @@ export default function App() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ force }),
       });
-      setNotice(
-        `Импортировано: ${payload.imported_count}, пропущено: ${payload.skipped_count}, ошибок: ${payload.error_count}`
-      );
+      setNotice(t.importedNotice({ imported: payload.imported_count, skipped: payload.skipped_count, errors: payload.error_count }));
       await refreshDatabase(dbFilters, 1);
     } catch (err) {
       setError(err.message);
@@ -357,7 +549,7 @@ export default function App() {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload),
           });
-      setNotice(logForm.id ? "Лог обновлен" : "Лог создан");
+      setNotice(logForm.id ? t.logUpdated : t.logCreated);
       setSelectedLog(saved);
       setLogForm({ id: saved.id, source_name: saved.source_name || "manual", raw_text: saved.raw_text || "" });
       await refreshDatabase(dbFilters, dbRows.page);
@@ -370,7 +562,7 @@ export default function App() {
 
   async function deleteCurrentLog() {
     if (!logForm.id) return;
-    const confirmed = window.confirm("Удалить выбранный лог из базы данных?");
+    const confirmed = window.confirm(t.deleteConfirm);
     if (!confirmed) return;
 
     setSavingLog(true);
@@ -378,7 +570,7 @@ export default function App() {
     setError("");
     try {
       await apiRequest(`/logs/${logForm.id}`, { method: "DELETE" });
-      setNotice("Лог удален");
+      setNotice(t.logDeleted);
       startNewLog();
       await refreshDatabase(dbFilters, dbRows.page);
     } catch (err) {
@@ -409,7 +601,7 @@ export default function App() {
         });
       } else {
         if (!uploadFile) {
-          throw new Error("Выбери файл для загрузки");
+          throw new Error(t.chooseFile);
         }
         const formData = new FormData();
         formData.append("file", uploadFile);
@@ -478,14 +670,22 @@ export default function App() {
       <header className="topbar">
         <div>
           <div className="brand">LogFuzzy</div>
-          <div className="brand-subtitle">База логов, поиск и fuzzy-анализ критичности</div>
+          <div className="brand-subtitle">{t.appSubtitle}</div>
         </div>
         <nav className="tabs">
           <button className={activeView === "database" ? "active" : ""} onClick={() => setActiveView("database")}>
-            Логи в БД
+            {t.database}
           </button>
           <button className={activeView === "analysis" ? "active" : ""} onClick={() => setActiveView("analysis")}>
-            Анализ файла
+            {t.analysis}
+          </button>
+        </nav>
+        <nav className="locale-switch" aria-label="Language">
+          <button className={locale === "ru" ? "active" : ""} onClick={() => setLocale("ru")}>
+            RU
+          </button>
+          <button className={locale === "en" ? "active" : ""} onClick={() => setLocale("en")}>
+            EN
           </button>
         </nav>
       </header>
@@ -493,48 +693,48 @@ export default function App() {
       <div className="workspace">
         <aside className="sidebar">
           <section className="panel">
-            <label className="label">API URL</label>
+            <label className="label">{t.apiUrl}</label>
             <input value={apiBase} onChange={(event) => setApiBase(event.target.value)} placeholder={DEFAULT_API_BASE} />
             <button className="secondary full" onClick={() => void refreshInitialData()} disabled={loadingDb || loadingDatasets}>
-              Обновить подключение
+              {t.refreshConnection}
             </button>
           </section>
 
           <section className="panel">
-            <div className="panel-title">База данных</div>
+            <div className="panel-title">{t.databasePanel}</div>
             <div className="mini-grid">
-              <StatCard label="Логов" value={dbOverview.total_logs} />
-              <StatCard label="Источников" value={dbOverview.total_sources} />
-              <StatCard label="Критичных" value={dbOverview.critical_logs} tone="danger" />
+              <StatCard label={t.logs} value={dbOverview.total_logs} />
+              <StatCard label={t.sources} value={dbOverview.total_sources} />
+              <StatCard label={t.critical} value={dbOverview.critical_logs} tone="danger" />
             </div>
             <div className="button-row">
               <button className="primary" onClick={() => void syncData(false)} disabled={syncing}>
-                {syncing ? "Синхронизация..." : "Импорт data"}
+                {syncing ? t.syncing : t.importData}
               </button>
               <button className="secondary" onClick={() => void syncData(true)} disabled={syncing}>
-                Форсировать
+                {t.force}
               </button>
             </div>
           </section>
 
           {activeView === "analysis" ? (
             <section className="panel">
-              <div className="panel-title">Источник анализа</div>
+              <div className="panel-title">{t.analysisSource}</div>
               <div className="segmented">
                 <button className={sourceType === "dataset" ? "active" : ""} onClick={() => setSourceType("dataset")}>
-                  Датасет
+                  {t.dataset}
                 </button>
                 <button className={sourceType === "upload" ? "active" : ""} onClick={() => setSourceType("upload")}>
-                  Файл
+                  {t.file}
                 </button>
                 <button className={sourceType === "text" ? "active" : ""} onClick={() => setSourceType("text")}>
-                  Текст
+                  {t.text}
                 </button>
               </div>
 
               {sourceType === "dataset" ? (
                 <>
-                  <label className="label">Файл из data</label>
+                  <label className="label">{t.dataFile}</label>
                   <select value={selectedDataset} onChange={(event) => setSelectedDataset(event.target.value)}>
                     {datasets.map((dataset) => (
                       <option key={dataset.name} value={dataset.name}>
@@ -547,31 +747,31 @@ export default function App() {
 
               {sourceType === "upload" ? (
                 <>
-                  <label className="label">Локальный файл</label>
+                  <label className="label">{t.localFile}</label>
                   <input type="file" accept=".log,.txt" onChange={(event) => setUploadFile(event.target.files?.[0] ?? null)} />
                 </>
               ) : null}
 
               {sourceType === "text" ? (
                 <>
-                  <label className="label">Текст логов</label>
+                  <label className="label">{t.logText}</label>
                   <textarea rows={8} value={manualText} onChange={(event) => setManualText(event.target.value)} />
                 </>
               ) : null}
 
               <button className="primary full" onClick={() => void analyzeSource()} disabled={analyzing}>
-                {analyzing ? "Анализ..." : "Запустить анализ"}
+                {analyzing ? t.analyzing : t.runAnalysis}
               </button>
             </section>
           ) : null}
 
-          <section className="panel">
-            <div className="panel-title">AI-рекомендации</div>
+          <details className="panel soft-panel">
+            <summary className="panel-title">{t.aiRecommendations}</summary>
             <div className="mini-grid">
               <StatCard
-                label="В индексе"
-                value={recStatus.pg_indexed >= 0 ? recStatus.pg_indexed : "—"}
-                hint={recStatus.pg_indexed < 0 ? "нет связи" : undefined}
+                label={t.indexed}
+                value={recStatus.pg_indexed >= 0 ? recStatus.pg_indexed : "-"}
+                hint={recStatus.pg_indexed < 0 ? t.noConnection : undefined}
               />
               <StatCard
                 label="Ollama"
@@ -585,16 +785,16 @@ export default function App() {
               </div>
             ) : null}
             <button className="secondary full" onClick={() => void handleIndexAll()} disabled={indexing}>
-              {indexing ? "Индексация..." : "Индексировать (≤500 логов)"}
+              {indexing ? t.indexing : `${t.indexLogs} (≤500)`}
             </button>
             <button className="secondary full" style={{ marginTop: "0.35rem" }} onClick={() => void fetchRecStatus()} disabled={indexing}>
-              Обновить статус
+              {t.refreshStatus}
             </button>
-          </section>
+          </details>
 
           {sources.length ? (
-            <section className="panel">
-              <div className="panel-title">Импортированные источники</div>
+            <details className="panel soft-panel">
+              <summary className="panel-title">{t.importedSources}</summary>
               <div className="source-list">
                 {sources.slice(0, 8).map((source) => (
                   <div key={source.id} className="source-item">
@@ -603,7 +803,7 @@ export default function App() {
                   </div>
                 ))}
               </div>
-            </section>
+            </details>
           ) : null}
 
           {notice ? <div className="notice-box">{notice}</div> : null}
@@ -631,6 +831,7 @@ export default function App() {
               saveLog={saveLog}
               deleteCurrentLog={deleteCurrentLog}
               apiBase={cleanApiBase}
+              t={t}
             />
           ) : (
             <AnalysisView
@@ -644,6 +845,7 @@ export default function App() {
               applyFilters={() => analysis && fetchAnalysisRows(analysis.analysis_id, 1, analysisFilters)}
               refreshPage={(page) => analysis && fetchAnalysisRows(analysis.analysis_id, page)}
               apiBase={cleanApiBase}
+              t={t}
             />
           )}
         </main>
@@ -671,6 +873,7 @@ function DatabaseView({
   saveLog,
   deleteCurrentLog,
   apiBase,
+  t,
 }) {
   const [rec, setRec] = useState({ mode: null, loading: false, similar: [], advice: "", error: "" });
 
@@ -729,34 +932,20 @@ function DatabaseView({
 
   return (
     <>
-      <section className="analytics-grid two">
-        <div className="panel">
-          <div className="panel-title">Топ событий по числу (DB)</div>
-          {eventBins && eventBins.length ? <Histogram bins={eventBins} /> : <EmptyState title="Нет данных" />}
-        </div>
-        <div className="panel">
-          <div className="panel-title">Уровни логов</div>
-          {levelsArray && levelsArray.length ? (
-            <DonutChart data={levelsMap} size={160} thickness={18} colors={["#ef4444", "#f59e0b", "#2563eb", "#60a5fa"]} />
-          ) : (
-            <EmptyState title="Нет данных" />
-          )}
-        </div>
-      </section>
       <section className="summary-grid">
-        <StatCard label="Найдено" value={summary.total ?? 0} />
-        <StatCard label="Критичные" value={summary.critical_count ?? 0} tone="danger" />
-        <StatCard label="WARN" value={summary.warn_count ?? 0} tone="warning" />
-        <StatCard label="ERROR/FATAL" value={summary.error_count ?? 0} tone="danger" />
-        <StatCard label="Средняя criticality" value={score(summary.avg_criticality)} hint={`max ${score(summary.max_criticality)}`} />
+        <StatCard label={t.found} value={summary.total ?? 0} />
+        <StatCard label={t.critical} value={summary.critical_count ?? 0} tone="danger" />
+        <StatCard label={t.warn} value={summary.warn_count ?? 0} tone="warning" />
+        <StatCard label={t.errorFatal} value={summary.error_count ?? 0} tone="danger" />
+        <StatCard label={t.avgCriticality} value={score(summary.avg_criticality)} hint={`${t.max} ${score(summary.max_criticality)}`} />
       </section>
 
       <section className="panel">
-        <div className="panel-title">Поиск и фильтры</div>
-        <div className="filters">
-          <input value={filters.search} onChange={(event) => updateFilter("search", event.target.value)} placeholder="Поиск по сообщению, компоненту, сигнатуре" />
+        <div className="panel-title">{t.filters}</div>
+        <div className="filters filters-primary">
+          <input value={filters.search} onChange={(event) => updateFilter("search", event.target.value)} placeholder={t.searchPlaceholder} />
           <select value={filters.source_name} onChange={(event) => updateFilter("source_name", event.target.value)}>
-            <option value="">Все источники</option>
+            <option value="">{t.allSources}</option>
             {(options.sources || []).map((source) => (
               <option key={source} value={source}>
                 {source}
@@ -764,22 +953,29 @@ function DatabaseView({
             ))}
           </select>
           <select value={filters.level} onChange={(event) => updateFilter("level", event.target.value)}>
-            <option value="">Все уровни</option>
+            <option value="">{t.allLevels}</option>
             {(options.levels || []).map((level) => (
               <option key={level} value={level}>
                 {level}
               </option>
             ))}
           </select>
+          <button className="primary" onClick={() => void applyFilters()} disabled={loading}>
+            {t.apply}
+          </button>
+        </div>
+        <details className="advanced-filters">
+          <summary>{t.advancedFilters}</summary>
+          <div className="filters filters-secondary">
           <select value={filters.event_type} onChange={(event) => updateFilter("event_type", event.target.value)}>
-            <option value="">Все события</option>
+            <option value="">{t.allEvents}</option>
             {(options.event_types || []).map((eventType) => (
               <option key={eventType} value={eventType}>
                 {eventType}
               </option>
             ))}
           </select>
-          <input value={filters.component} onChange={(event) => updateFilter("component", event.target.value)} placeholder="Component" />
+          <input value={filters.component} onChange={(event) => updateFilter("component", event.target.value)} placeholder={t.component} />
           <input
             type="number"
             min="0"
@@ -787,7 +983,7 @@ function DatabaseView({
             step="0.05"
             value={filters.min_criticality}
             onChange={(event) => updateFilter("min_criticality", event.target.value)}
-            placeholder="Min criticality"
+            placeholder={t.minCriticality}
           />
           <select value={filters.sort_by} onChange={(event) => updateFilter("sort_by", event.target.value)}>
             <option value="criticality">criticality</option>
@@ -804,32 +1000,30 @@ function DatabaseView({
           </select>
           <label className="check-row">
             <input type="checkbox" checked={filters.critical_only} onChange={(event) => updateFilter("critical_only", event.target.checked)} />
-            Только критичные
+            {t.onlyCritical}
           </label>
-          <button className="primary" onClick={() => void applyFilters()} disabled={loading}>
-            Применить
-          </button>
-        </div>
+          </div>
+        </details>
       </section>
 
       <section className="db-grid">
         <div className="panel table-panel">
           <div className="table-header">
             <div>
-              <div className="panel-title">Логи</div>
+              <div className="panel-title">{t.logs}</div>
               <div className="table-meta">
-                {loading ? "Загрузка..." : `Показано ${rowsState.rows.length} из ${rowsState.total}`}
+                {loading ? t.loading : t.shown(rowsState.rows.length, rowsState.total)}
               </div>
             </div>
             <div className="pagination">
               <button className="secondary compact" onClick={() => void refreshPage(rowsState.page - 1)} disabled={rowsState.page <= 1 || loading}>
-                Назад
+                {t.back}
               </button>
               <span>
                 {rowsState.page} / {pageCount}
               </span>
               <button className="secondary compact" onClick={() => void refreshPage(rowsState.page + 1)} disabled={rowsState.page >= pageCount || loading}>
-                Вперед
+                {t.forward}
               </button>
             </div>
           </div>
@@ -839,13 +1033,13 @@ function DatabaseView({
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Источник</th>
+                  <th>{t.source}</th>
                   <th>ts</th>
                   <th>level</th>
                   <th>component</th>
-                  <th>event</th>
-                  <th>criticality</th>
-                  <th>message</th>
+                  <th>{t.event}</th>
+                  <th>{t.criticality}</th>
+                  <th>{t.message}</th>
                 </tr>
               </thead>
               <tbody>
@@ -879,16 +1073,16 @@ function DatabaseView({
 
         <aside className="panel detail-panel">
           <div className="detail-header">
-            <div className="panel-title">{logForm.id ? `Лог #${logForm.id}` : "Новый лог"}</div>
+            <div className="panel-title">{logForm.id ? `Log #${logForm.id}` : t.newLog}</div>
             <button className="secondary compact" onClick={startNewLog}>
-              Новый
+              {t.new}
             </button>
           </div>
 
           <form onSubmit={saveLog} className="log-form">
-            <label className="label">Источник</label>
+            <label className="label">{t.source}</label>
             <input value={logForm.source_name} onChange={(event) => setLogForm((current) => ({ ...current, source_name: event.target.value }))} />
-            <label className="label">Raw text</label>
+            <label className="label">{t.rawText}</label>
             <textarea
               rows={7}
               value={logForm.raw_text}
@@ -896,23 +1090,23 @@ function DatabaseView({
             />
             <div className="button-row">
               <button className="primary" type="submit" disabled={saving}>
-                {saving ? "Сохранение..." : logForm.id ? "Обновить" : "Создать"}
+                {saving ? t.saving : logForm.id ? t.update : t.create}
               </button>
               <button className="danger" type="button" onClick={() => void deleteCurrentLog()} disabled={!logForm.id || saving}>
-                Удалить
+                {t.delete}
               </button>
             </div>
           </form>
 
           {selectedLog ? (
             <div className="details">
-              <div className="panel-title nested">Детали</div>
+              <div className="panel-title nested">{t.details}</div>
               <div className="detail-line">
-                <span>Сигнатура</span>
+                <span>{t.signature}</span>
                 <strong className="mono">{selectedLog.signature || "-"}</strong>
               </div>
               <div className="detail-line">
-                <span>Строка</span>
+                <span>{t.row}</span>
                 <strong>{selectedLog.line_number || "-"}</strong>
               </div>
               <div className="detail-line">
@@ -928,7 +1122,7 @@ function DatabaseView({
               </div>
 
               <div className="rec-section">
-                <div className="panel-title nested">AI-рекомендации</div>
+                <div className="panel-title nested">{t.aiRecommendations}</div>
                 <div className="button-row">
                   <button
                     className="secondary"
@@ -936,7 +1130,7 @@ function DatabaseView({
                     onClick={() => void handleSimilar()}
                     disabled={rec.loading}
                   >
-                    {rec.loading && rec.mode === "similar" ? "Поиск..." : "Похожие"}
+                    {rec.loading && rec.mode === "similar" ? t.searching : t.similar}
                   </button>
                   <button
                     className="primary"
@@ -944,7 +1138,7 @@ function DatabaseView({
                     onClick={() => void handleAdvice()}
                     disabled={rec.loading}
                   >
-                    {rec.loading && rec.mode === "advice" ? "Анализ..." : "Совет"}
+                    {rec.loading && rec.mode === "advice" ? t.analyzing : t.advice}
                   </button>
                 </div>
 
@@ -952,7 +1146,7 @@ function DatabaseView({
 
                 {rec.mode === "similar" && !rec.loading && rec.similar.length === 0 && !rec.error ? (
                   <div className="empty-state" style={{ padding: "0.5rem 0", fontSize: "0.82rem" }}>
-                    Нет данных — сначала нажмите «Индексировать» в сайдбаре
+                    {t.noIndexData}
                   </div>
                 ) : null}
 
@@ -983,37 +1177,57 @@ function DatabaseView({
         </aside>
       </section>
 
-      <section className="analytics-grid">
-        <div className="panel">
-          <div className="panel-title">Проблемные компоненты</div>
+      <details className="panel analytics-disclosure">
+        <summary className="panel-title">{t.fullMode}</summary>
+        <section className="analytics-grid two">
+          <div>
+            <div className="panel-title nested">{t.eventTop}</div>
+            {eventBins && eventBins.length ? <Histogram bins={eventBins} /> : <EmptyState title={t.noData} />}
+          </div>
+          <div>
+            <div className="panel-title nested">{t.logLevels}</div>
+            {levelsArray && levelsArray.length ? (
+              <DonutChart data={levelsMap} size={160} thickness={18} colors={["#ef4444", "#f59e0b", "#2563eb", "#60a5fa"]} />
+            ) : (
+              <EmptyState title={t.noData} />
+            )}
+          </div>
+        </section>
+      </details>
+
+      <details className="panel analytics-disclosure">
+        <summary className="panel-title">{t.overview}</summary>
+        <section className="analytics-grid">
+        <div className="insight-block">
+          <div className="panel-title">{t.problemComponents}</div>
           <div className="rank-list">
             {(stats?.problem_components || []).map((item) => (
               <div key={item.component} className="rank-row">
                 <span className="mono">{item.component}</span>
-                <strong>{item.critical_count} крит.</strong>
+                <strong>{item.critical_count} {t.criticalShort}</strong>
                 <small>avg {score(item.avg_criticality)}</small>
               </div>
             ))}
-            {!(stats?.problem_components || []).length ? <EmptyState title="Нет данных" /> : null}
+            {!(stats?.problem_components || []).length ? <EmptyState title={t.noData} /> : null}
           </div>
         </div>
 
-        <div className="panel">
-          <div className="panel-title">Повторяющиеся ошибки</div>
+        <div className="insight-block">
+          <div className="panel-title">{t.repeatedErrors}</div>
           <div className="rank-list">
             {(stats?.repeated_errors || []).map((item) => (
               <button key={`${item.signature}-${item.component}`} className="rank-row clickable" onClick={() => updateFilter("search", item.signature)}>
                 <span className="mono">{item.signature}</span>
-                <strong>{item.count} раз</strong>
+                <strong>{item.count} {t.times}</strong>
                 <small>{item.component}</small>
               </button>
             ))}
-            {!(stats?.repeated_errors || []).length ? <EmptyState title="Нет данных" /> : null}
+            {!(stats?.repeated_errors || []).length ? <EmptyState title={t.noData} /> : null}
           </div>
         </div>
 
-        <div className="panel">
-          <div className="panel-title">Критичные записи</div>
+        <div className="insight-block">
+          <div className="panel-title">{t.criticalRows}</div>
           <div className="rank-list">
             {(stats?.critical_rows || []).map((row) => (
               <button key={row.id} className="rank-row clickable" onClick={() => selectLog(row)}>
@@ -1022,36 +1236,37 @@ function DatabaseView({
                 <small>#{row.id}</small>
               </button>
             ))}
-            {!(stats?.critical_rows || []).length ? <EmptyState title="Нет данных" /> : null}
+            {!(stats?.critical_rows || []).length ? <EmptyState title={t.noData} /> : null}
           </div>
         </div>
-      </section>
+        </section>
+      </details>
     </>
   );
 }
 
-function AnalysisView({ summary, analysis, rowsState, pageCount, filters, loadingRows, updateFilter, applyFilters, refreshPage, apiBase }) {
+function AnalysisView({ summary, analysis, rowsState, pageCount, filters, loadingRows, updateFilter, applyFilters, refreshPage, apiBase, t }) {
   if (!summary) {
-    return <EmptyState title="Запусти анализ датасета, файла или ручного текста" />;
+    return <EmptyState title={t.runAnalysisEmpty} />;
   }
 
   return (
     <>
       <section className="summary-grid">
-        <StatCard label="Источник" value={summary.source_name} />
-        <StatCard label="Строк" value={summary.row_count} />
-        <StatCard label="Parse OK" value={`${(summary.parse_ok_rate * 100).toFixed(1)}%`} />
-        <StatCard label="WARN" value={`${(summary.warn_rate * 100).toFixed(1)}%`} tone="warning" />
-        <StatCard label="Средняя criticality" value={score(summary.criticality.mean)} hint={`max ${score(summary.criticality.max)}`} />
+        <StatCard label={t.source} value={summary.source_name} />
+        <StatCard label={t.rows} value={summary.row_count} />
+        <StatCard label={t.parseOk} value={`${(summary.parse_ok_rate * 100).toFixed(1)}%`} />
+        <StatCard label={t.warn} value={`${(summary.warn_rate * 100).toFixed(1)}%`} tone="warning" />
+        <StatCard label={t.avgCriticality} value={score(summary.criticality.mean)} hint={`${t.max} ${score(summary.criticality.max)}`} />
       </section>
 
       <section className="analytics-grid two">
         <div className="panel">
-          <div className="panel-title">Распределение criticality</div>
+          <div className="panel-title">{t.distribution}</div>
           <Histogram bins={summary.histogram} />
         </div>
         <div className="panel">
-          <div className="panel-title">Сводка</div>
+          <div className="panel-title">{t.summary}</div>
           <div className="tag-list">
             {Object.entries(summary.levels).map(([level, count]) => (
               <Badge key={level} tone={level === "WARN" ? "warning" : level === "ERROR" || level === "FATAL" ? "critical" : "neutral"}>
@@ -1059,23 +1274,23 @@ function AnalysisView({ summary, analysis, rowsState, pageCount, filters, loadin
               </Badge>
             ))}
           </div>
-          <div className="panel-title nested">События</div>
+          <div className="panel-title nested">{t.events}</div>
           <div className="tag-list">
             {Object.entries(summary.event_types).map(([eventType, count]) => (
               <Badge key={eventType}>{eventType}: {count}</Badge>
             ))}
           </div>
           <button className="secondary full" onClick={() => window.open(`${apiBase}/analyses/${analysis.analysis_id}/download`, "_blank")}>
-            Скачать CSV
+            {t.downloadCsv}
           </button>
         </div>
       </section>
 
       <section className="panel">
-        <div className="panel-title">Фильтры</div>
+        <div className="panel-title">{t.filters}</div>
         <div className="filters analysis-filters">
           <select value={filters.level} onChange={(event) => updateFilter("level", event.target.value)}>
-            <option value="">Все уровни</option>
+            <option value="">{t.allLevels}</option>
             {summary.filter_options.levels.map((level) => (
               <option key={level} value={level}>
                 {level}
@@ -1083,15 +1298,15 @@ function AnalysisView({ summary, analysis, rowsState, pageCount, filters, loadin
             ))}
           </select>
           <select value={filters.event_type} onChange={(event) => updateFilter("event_type", event.target.value)}>
-            <option value="">Все события</option>
+            <option value="">{t.allEvents}</option>
             {summary.filter_options.event_types.map((eventType) => (
               <option key={eventType} value={eventType}>
                 {eventType}
               </option>
             ))}
           </select>
-          <input value={filters.component} onChange={(event) => updateFilter("component", event.target.value)} placeholder="Component" />
-          <input value={filters.search} onChange={(event) => updateFilter("search", event.target.value)} placeholder="Поиск" />
+          <input value={filters.component} onChange={(event) => updateFilter("component", event.target.value)} placeholder={t.component} />
+          <input value={filters.search} onChange={(event) => updateFilter("search", event.target.value)} placeholder={t.searchPlaceholder} />
           <select value={filters.sort_by} onChange={(event) => updateFilter("sort_by", event.target.value)}>
             <option value="criticality">criticality</option>
             <option value="ts">ts</option>
@@ -1105,28 +1320,28 @@ function AnalysisView({ summary, analysis, rowsState, pageCount, filters, loadin
             <option value="asc">asc</option>
           </select>
           <button className="primary" onClick={() => void applyFilters()} disabled={loadingRows}>
-            Применить
+            {t.apply}
           </button>
         </div>
       </section>
 
       <section className="panel">
         <div className="table-header">
-          <div>
-            <div className="panel-title">Результаты</div>
+            <div>
+            <div className="panel-title">{t.results}</div>
             <div className="table-meta">
-              {loadingRows ? "Загрузка..." : `Показано ${rowsState.rows.length} из ${rowsState.total}`}
+              {loadingRows ? t.loading : t.shown(rowsState.rows.length, rowsState.total)}
             </div>
           </div>
           <div className="pagination">
             <button className="secondary compact" onClick={() => void refreshPage(rowsState.page - 1)} disabled={rowsState.page <= 1 || loadingRows}>
-              Назад
+              {t.back}
             </button>
             <span>
               {rowsState.page} / {pageCount}
             </span>
             <button className="secondary compact" onClick={() => void refreshPage(rowsState.page + 1)} disabled={rowsState.page >= pageCount || loadingRows}>
-              Вперед
+              {t.forward}
             </button>
           </div>
         </div>
@@ -1139,9 +1354,9 @@ function AnalysisView({ summary, analysis, rowsState, pageCount, filters, loadin
                 <th>ts</th>
                 <th>level</th>
                 <th>component</th>
-                <th>event</th>
-                <th>criticality</th>
-                <th>message</th>
+                <th>{t.event}</th>
+                <th>{t.criticality}</th>
+                <th>{t.message}</th>
               </tr>
             </thead>
             <tbody>
