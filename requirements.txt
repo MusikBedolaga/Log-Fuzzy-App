@@ -8,3 +8,6 @@ ipykernel
 fastapi
 uvicorn
 python-multipart
+httpx
+psycopg2-binary
+pgvector
