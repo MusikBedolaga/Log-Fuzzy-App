@@ -1,0 +1,355 @@
+id,level,system,label,raw_line
+0,ERROR,BGL,1,050701 110531 241131 ERROR BGL|NULL.DISCOVERY: Can not get assembly information for node card
+1,ERROR,BGL,1,050802 163914 25954 ERROR BGL|NULL.HARDWARE: NodeCard is not fully functional
+2,ERROR,BGL,1,"050802 175807 30687 ERROR BGL|NULL.DISCOVERY: Node card status: ALERT 0, ALERT 1, ALERT 2, ALERT 3 is (are) active. Clock Mode is Low. Clock Select is Midplane. Phy JTAG Reset is asserted. ASIC JTAG Reset is not asserted. Temperature Mask is not active. No temperature error. Temperature Limit Error Latch is clear. PGOOD is asserted. PGOOD error latch is clear. MPGOOD is OK. MPGOOD error latch is clear. The 2.5 volt rail is OK. The 1.5 volt rail is OK."
+3,ERROR,BGL,1,"050803 161102 110662 ERROR BGL|RAS.MMCS: idoproxydb hit ASSERT condition: ASSERT expression=0 Source file=idotransportmgr.cpp Source line=1043 Function=int IdoTransportMgr::SendPacket(IdoUdpMgr*, BglCtlPavTrace*)"
+4,ERROR,BGL,1,050804 102746 176466 ERROR BGL|NULL.DISCOVERY: Node card status: no ALERTs are active. Clock Mode is Low. Clock Select is Midplane. Phy JTAG Reset is asserted. ASIC JTAG Reset is asserted. Temperature Mask is not active. No temperature error. Temperature Limit Error Latch is clear. PGOOD IS NOT ASSERTED. PGOOD ERROR LATCH IS ACTIVE. MPGOOD IS NOT OK. MPGOOD ERROR LATCH IS ACTIVE. The 2.5 volt rail is OK. The 1.5 volt rail is OK.
+5,ERROR,Zookeeper,1,150729 190335 264145 ERROR Zookeeper|LearnerHandler-/10.10.34.11:52225:LearnerHandler@562: Unexpected exception causing shutdown while sock still open
+6,ERROR,Zookeeper,1,150729 234428 619036 ERROR Zookeeper|CommitProcessor:1:NIOServerCnxn@180: Unexpected Exception:
+7,ERROR,Hadoop,0,151018 180411 687506 ERROR Hadoop|org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Container complete event for unknown container id container_1445144423722_0020_01_000012
+8,ERROR,Hadoop,1,151018 180601 687506 ERROR Hadoop|org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: ERROR IN CONTACTING RM.
+9,ERROR,Hadoop,1,151018 180626 160608 ERROR Hadoop|org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Error writing History Event: org.apache.hadoop.mapreduce.jobhistory.TaskAttemptUnsuccessfulCompletionEvent@7317849d
+10,ERROR,Hadoop,1,"151018 180626 160608 ERROR Hadoop|org.apache.hadoop.yarn.YarnUncaughtExceptionHandler: Thread Thread[eventHandlingThread,5,main] threw an Exception."
+11,FATAL,BGL,1,050604 002432 869872 FATAL BGL|RAS.APP: ciod: failed to read message prefix on control stream (CioStream socket to 172.16.96.116:33569
+12,FATAL,BGL,0,050605 081046 984246 FATAL BGL|RAS.KERNEL: force load/store alignment...............0
+13,FATAL,BGL,1,050607 181558 193358 FATAL BGL|RAS.APP: ciod: LOGIN chdir(/p/gb2/glosli/8M_5000K/t800) failed: No such file or directory
+14,FATAL,BGL,1,050611 173207 536327 FATAL BGL|RAS.KERNEL: data TLB error interrupt
+15,FATAL,BGL,1,050613 173643 709403 FATAL BGL|RAS.KERNEL: data storage interrupt
+16,FATAL,BGL,0,050613 174555 709955 FATAL BGL|RAS.KERNEL: instruction address: 0x00004ed8
+17,FATAL,BGL,0,050614 093655 767015 FATAL BGL|RAS.KERNEL: data address: 0x00000002
+18,FATAL,BGL,0,050614 094123 767283 FATAL BGL|RAS.KERNEL: machine check: i-fetch......................0
+19,FATAL,BGL,0,050614 094301 767381 FATAL BGL|RAS.KERNEL: program interrupt: illegal instruction......0
+20,FATAL,BGL,0,050614 101850 769530 FATAL BGL|RAS.KERNEL: exception syndrome register: 0x00800000
+21,FATAL,BGL,0,050614 102631 769991 FATAL BGL|RAS.KERNEL: data store interrupt caused by dcbf.........0
+22,FATAL,BGL,0,050614 103027 770227 FATAL BGL|RAS.KERNEL: program interrupt: privileged instruction...0
+23,FATAL,BGL,0,050614 103149 770309 FATAL BGL|RAS.KERNEL: program interrupt: trap instruction.........0
+24,FATAL,BGL,0,050614 103255 770375 FATAL BGL|RAS.KERNEL: program interrupt: imprecise exception......0
+25,FATAL,BGL,0,050614 103643 770603 FATAL BGL|RAS.KERNEL: store operation.............................1
+26,FATAL,BGL,0,050614 103726 770646 FATAL BGL|RAS.KERNEL: machine state register: 0x00002000
+27,FATAL,BGL,0,050614 104158 770918 FATAL BGL|RAS.KERNEL: data store interrupt caused by icbi.........0
+28,FATAL,BGL,0,"050614 104234 770954 FATAL BGL|RAS.KERNEL: problem state (0=sup,1=usr).......0"
+29,FATAL,BGL,0,050614 104321 771001 FATAL BGL|RAS.KERNEL: floating point instr. enabled.....1
+30,FATAL,BGL,0,050614 104435 771075 FATAL BGL|RAS.KERNEL: auxiliary processor.........................0
+31,FATAL,BGL,0,050614 104445 771085 FATAL BGL|RAS.KERNEL: machine check enable..............0
+32,FATAL,BGL,0,050614 104515 771115 FATAL BGL|RAS.KERNEL: floating pt ex mode 0 enable......0
+33,FATAL,BGL,0,050614 104739 771259 FATAL BGL|RAS.KERNEL: program interrupt: unimplemented operation..0
+34,FATAL,BGL,0,050614 104822 771302 FATAL BGL|RAS.KERNEL: debug interrupt enable............0
+35,FATAL,BGL,0,050614 104944 771384 FATAL BGL|RAS.KERNEL: byte ordering exception.....................0
+36,FATAL,BGL,0,050614 105109 771469 FATAL BGL|RAS.KERNEL: data address space................0
+37,FATAL,BGL,0,050614 105208 771528 FATAL BGL|RAS.KERNEL: core configuration register: 0x00002000
+38,FATAL,BGL,0,050614 105439 771679 FATAL BGL|RAS.KERNEL: program interrupt: fp cr update.............0
+39,FATAL,BGL,0,050614 105703 771823 FATAL BGL|RAS.KERNEL: guaranteed instruction cache block touch.0
+40,FATAL,BGL,0,050614 105755 771875 FATAL BGL|RAS.KERNEL: program interrupt: fp cr field .............0
+41,FATAL,BGL,0,050614 105848 771928 FATAL BGL|RAS.KERNEL: guaranteed data cache block touch........1
+42,FATAL,BGL,0,050614 110022 772022 FATAL BGL|RAS.KERNEL: icache prefetch depth....................0
+43,FATAL,BGL,0,050614 110202 772122 FATAL BGL|RAS.KERNEL: icache prefetch threshold................0
+44,FATAL,BGL,0,050614 110308 772188 FATAL BGL|RAS.KERNEL: wait state enable.................0
+45,FATAL,BGL,0,050614 110537 772337 FATAL BGL|RAS.KERNEL: critical input interrupt enable...0
+46,FATAL,BGL,0,050614 111330 772810 FATAL BGL|RAS.KERNEL: special purpose registers:
+47,FATAL,BGL,0,050614 111437 772877 FATAL BGL|RAS.KERNEL: lr:00004ed0 cr:28244842 xer:20000002 ctr:00086000
+48,FATAL,BGL,1,050614 111527 772927 FATAL BGL|RAS.KERNEL: rts internal error
+49,FATAL,BGL,0,050614 112052 773252 FATAL BGL|RAS.KERNEL: debug wait enable.................0
+50,FATAL,BGL,0,050614 112658 773618 FATAL BGL|RAS.KERNEL: instruction address space.........0
+51,FATAL,BGL,0,050614 113221 773941 FATAL BGL|RAS.KERNEL: disable store gathering..................0
+52,FATAL,BGL,1,"050620 162353 309833 FATAL BGL|RAS.APP: ciod: Error loading /home/draeger/testQboxhang-nozerobytebug-nosleepyescomm: invalid or missing program image, No such file or directory"
+53,FATAL,BGL,1,050620 190415 319455 FATAL BGL|RAS.APP: ciod: Error creating node map from file /p/gb2/cabot/miranda/newmaps/8k_128x64x1_8x4x4.map: No child processes
+54,FATAL,BGL,1,"050621 180734 402454 FATAL BGL|RAS.APP: ciod: Error loading ./runtime_malloc: invalid or missing program image, No such file or directory"
+55,FATAL,BGL,1,"050625 145147 736307 FATAL BGL|RAS.APP: ciod: Error loading /home/glosli/src/ddcMD/ddcMD/1.1.13/ddcMDbglV: invalid or missing program image, No such file or directory"
+56,FATAL,BGL,1,050630 162443 173883 FATAL BGL|RAS.APP: ciod: Error creating node map from file /p/gb2/welcome3/32k_128x256x1_8x4x4.map: Bad file descriptor
+57,FATAL,BGL,1,050709 045146 909906 FATAL BGL|RAS.APP: ciod: Error creating node map from file /p/gb2/pakin1/sweep3d-5x5x400-10mk-3mmi-1024pes-xyzt/xyzt.map: Block device required
+58,FATAL,BGL,1,"050711 125451 111691 FATAL BGL|RAS.APP: ciod: Error loading /home/greeno/raptor.new.dev.3d.BGL.CXX_XL.MPI.ex: invalid or missing program image, No such file or directory"
+59,FATAL,BGL,1,050711 140337 115817 FATAL BGL|RAS.KERNEL: rts panic! - stopping execution
+60,FATAL,BGL,1,050714 162022 383222 FATAL BGL|RAS.APP: ciod: Error creating node map from file /home/pakin1/sweep3d-2.2b/results/random1-8x32x32x2.map: Permission denied
+61,FATAL,BGL,1,"050718 155326 727206 FATAL BGL|RAS.KERNEL: rts: kernel terminated for reason 1001rts: bad message header: invalid cpu, type=42315, cpu=105, index=1207960804, total=2691015"
+62,FATAL,BGL,1,050809 120932 614572 FATAL BGL|RAS.KERNEL: rts tree/torus link training failed: wanted: B C X+ X- Y+ Y- Z+ Z- got: B C X- Y- Z+ Z-
+63,FATAL,BGL,1,"050812 232512 914312 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/scaletest/performance/MINIBEN/mb_243_0810/allreduce.rts: invalid or missing program image, Exec format error"
+64,FATAL,BGL,1,050813 135416 966456 FATAL BGL|RAS.APP: ciod: LOGIN chdir(pwd) failed: No such file or directory
+65,FATAL,BGL,1,"050813 163908 976348 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/scaletest/stability/MDCASK/WORK/65576/inferno: invalid or missing program image, No such file or directory"
+66,FATAL,BGL,1,050814 190239 71359 FATAL BGL|RAS.APP: ciod: Error reading message prefix after LOAD_MESSAGE on CioStream socket to 172.16.96.116:42213: Link has been severed
+67,FATAL,BGL,1,050815 214519 167519 FATAL BGL|RAS.KERNEL: rts: kernel terminated for reason 1003
+68,FATAL,BGL,1,050817 122131 306491 FATAL BGL|RAS.APP: ciod: LOGIN chdir(/p/bg1/da) failed: No such file or directory
+69,FATAL,BGL,1,050822 074655 722015 FATAL BGL|RAS.APP: ciod: LOGIN chdir(/home/germann2/SPaSM_static) failed: No such file or directory
+70,FATAL,BGL,1,050823 045428 798068 FATAL BGL|RAS.APP: ciod: LOGIN chdir(/home/germann2/BGL-demo) failed: No such file or directory
+71,FATAL,BGL,1,050831 222953 552593 FATAL BGL|RAS.KERNEL: Lustre mount FAILED : bglio559 : point /p/gb1
+72,FATAL,BGL,1,050902 063517 668117 FATAL BGL|RAS.APP: ciod: LOGIN chdir(/bglscratch/bwallen/SWL/SYS-CALLS/testcases/kernel/syscalls/truncate) failed: No such file or directory
+73,FATAL,BGL,1,050903 050910 749350 FATAL BGL|RAS.APP: ciod: LOGIN chdir(/LAPACK_440d/BLAS) failed: No such file or directory
+74,FATAL,BGL,1,"050910 234615 421175 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/swl-prep/rky-swl/MPI-PERF/IMB/perf_tests/IMB-MPI1.5124KB: invalid or missing program image, No such file or directory"
+75,FATAL,BGL,1,050919 093214 147534 FATAL BGL|RAS.APP: ciod: LOGIN chdir(/home/spelce1/UMT2K/umt2k/ckpt_umt2k_src/TEST/NEW_TEST) failed: No such file or directory
+76,FATAL,BGL,1,050919 140353 163833 FATAL BGL|RAS.APP: ciod: LOGIN chdir(/home/yates/SWL_tests/BGL64k_SWL_tests_develop/MPI-VAL/MPITs_v050902/rundir) failed: No such file or directory
+77,FATAL,BGL,1,"050920 175522 264122 FATAL BGL|RAS.APP: ciod: Error loading /home/yates//bandwidth.rts: invalid or missing program image, No such file or directory"
+78,FATAL,BGL,1,"050920 175853 264333 FATAL BGL|RAS.APP: ciod: Error loading /home/yates//torus-latency.rts: invalid or missing program image, No such file or directory"
+79,FATAL,BGL,1,"050920 180115 264475 FATAL BGL|RAS.APP: ciod: Error loading /home/yates//broadcast.rts: invalid or missing program image, No such file or directory"
+80,FATAL,BGL,1,050920 180156 264516 FATAL BGL|RAS.KERNEL: rts: bad message header: expecting type 57 instead of type 3 (softheader=00131db8 81aa0003 00000002 00000000) PSR0=00001f01 PSR1=00000000 PRXF=00000002 PIXF=00000007
+81,FATAL,BGL,1,"050920 180746 264866 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/SWL/performance/MINIBEN//bandwidth.rts: invalid or missing program image, No such file or directory"
+82,FATAL,BGL,1,"050920 181034 265034 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/SWL/performance/MINIBEN//torus-latency.rts: invalid or missing program image, No such file or directory"
+83,FATAL,BGL,1,050920 181514 265314 FATAL BGL|RAS.APP: ciod: LOGIN chdir(/bgl/apps/SWL/performance/MINIBEN///2005.09.20-18.06.05) failed: No such file or directory
+84,FATAL,BGL,1,"051001 053837 170317 FATAL BGL|RAS.APP: ciod: Error loading /home/spelce1/HPCC_IBM/Urgent/Gunnels/VNM64/vnm.rts: invalid or missing program image, Permission denied"
+85,FATAL,BGL,1,"051005 040635 510395 FATAL BGL|RAS.APP: ciod: Error loading /home/spelce1/HPCC_IBM/Urgent/VNM/64K/vnm.rts: invalid or missing program image, Permission denied"
+86,FATAL,BGL,1,"051012 182407 166647 FATAL BGL|RAS.APP: ciod: Error loading /home/spelce1/HPCC_IBM/Urgent/COP/64K/vnm.rts: invalid or missing program image, Permission denied"
+87,FATAL,BGL,1,"051013 050214 204934 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/followup/SPASM/spasm.254: invalid or missing program image, Permission denied"
+88,FATAL,BGL,1,"051013 055909 208349 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/followup/MINIBEN/MB_254_051007/torus-latency.rts: invalid or missing program image, No such file or directory"
+89,FATAL,BGL,1,"051020 080309 820589 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/followup/RAPTOR/new.raptor.trace: invalid or missing program image, Exec format error"
+90,FATAL,BGL,1,"051025 074536 251536 FATAL BGL|RAS.APP: ciod: Error loading allreduce_int_V1R1.rts: invalid or missing program image, No such file or directory"
+91,FATAL,BGL,1,"051028 130011 529611 FATAL BGL|RAS.KERNEL: Error receiving packet on tree network, expecting type 57 instead of type 3 (softheader=0064588e 8aff0003 00000002 00000000) PSR0=00001f01 PSR1=00000000 PRXF=00000002 PIXF=00000007"
+92,FATAL,BGL,1,"051030 080037 688037 FATAL BGL|RAS.APP: ciod: Error loading /home/spelce1/HPCC_IBM/Urgent/COP/64K/hpcc-1.0.0.102905_opt_essl_cpm: invalid or missing program image, Permission denied"
+93,FATAL,BGL,1,"051103 070248 30168 FATAL BGL|RAS.APP: ciod: Error loading /g/g0/spelce1/HPCC_IBM/Urgent/COP/64K/RandomAccess.64R.rts: invalid or missing program image, Permission denied"
+94,FATAL,BGL,1,"051103 084400 36240 FATAL BGL|RAS.APP: ciod: Error loading /home.old/glosli/src/ddcMD/ddcMD1.1.17/bin/ddcMDGbglV: invalid or missing program image, No such file or directory"
+95,FATAL,BGL,1,"051103 084746 36466 FATAL BGL|RAS.APP: ciod: Error loading /home.old/glosli/src/ddcMD/ddcMD1.1.18a/bin/ddcMDGbglV: invalid or missing program image, No such file or directory"
+96,FATAL,BGL,1,"051107 043210 366730 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/followup/RAPTOR/pre-study/raptor.newcomp.r1: invalid or missing program image, Permission denied"
+97,FATAL,BGL,1,"051108 172523 499523 FATAL BGL|RAS.KERNEL: Error receiving packet on tree network, expecting type 57 instead of type 3 (softheader=00589370 90990003 00000002 00000000) PSR0=00001f01 PSR1=00000000 PRXF=00000002 PIXF=00000007"
+98,FATAL,BGL,1,"051114 182541 21541 FATAL BGL|RAS.KERNEL: Error receiving packet on tree network, expecting type 57 instead of type 3 (softheader=00ce22e8 e6200003 00000002 00000000) PSR0=00001f01 PSR1=00000000 PRXF=00000002 PIXF=00000007"
+99,FATAL,BGL,1,"051115 192118 111278 FATAL BGL|RAS.KERNEL: Error receiving packet on tree network, expecting type 57 instead of type 3 (softheader=009756d5 8bfa0003 00000002 00000000) PSR0=20021f01 PSR1=00000000 PRXF=00000002 PIXF=00000007"
+100,FATAL,BGL,1,"051117 050215 232535 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/followup/SPaSM_static/SPaSM.460-1115: invalid or missing program image, Permission denied"
+101,FATAL,BGL,1,051121 042318 575798 FATAL BGL|RAS.KERNEL: Lustre mount FAILED : bglio78 : block_id : location
+102,FATAL,BGL,1,"051121 110804 600084 FATAL BGL|RAS.APP: ciod: Error reading message prefix on CioStream socket to 172.16.96.116:41554, Connection timed out"
+103,FATAL,BGL,1,"051121 134058 609258 FATAL BGL|RAS.APP: ciod: Error reading message prefix on CioStream socket to 172.16.96.116:52839, Connection reset by peer"
+104,FATAL,BGL,0,051124 060756 841276 FATAL BGL|RAS.KERNEL: dbcr0=0x00000000 dbsr=0x00000000 ccr0=0x40002000
+105,FATAL,BGL,1,"051124 093805 853885 FATAL BGL|RAS.APP: ciod: Error reading message prefix on CioStream socket to 172.16.96.116:41534, Link has been severed"
+106,FATAL,BGL,0,051126 163956 51996 FATAL BGL|RAS.KERNEL: r24=0x0ffea4c8 r25=0x00000003 r26=0x0000000f r27=0xffffd000
+107,FATAL,BGL,1,051130 195755 409475 FATAL BGL|RAS.APP: ciod: LOGIN chdir(/g/g0/spelce1/Linpack_SWL) failed: No such file or directory
+108,FATAL,BGL,0,051204 103127 721087 FATAL BGL|RAS.KERNEL: minus normalized number..................0
+109,FATAL,BGL,0,051205 181041 835041 FATAL BGL|RAS.KERNEL: fraction rounded.........................0
+110,FATAL,BGL,0,051206 174227 919747 FATAL BGL|RAS.KERNEL: size of scratchpad portion of L3.........0 (0M)
+111,FATAL,BGL,1,"051208 221736 109056 FATAL BGL|RAS.APP: ciod: Error loading /g/g90/glosli/src/ddcMD/ddcMD1.1.17/bin/ddcMDbglV: invalid or missing program image, No such file or directory"
+112,FATAL,BGL,1,"051209 121416 159256 FATAL BGL|RAS.APP: ciod: Error loading /p/gb1/stella/SPPM/1322/sppm_DD: invalid or missing program image, Permission denied"
+113,FATAL,BGL,1,"051209 121815 159495 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/SWL/stability/MDCASK/WORK/1383/inferno: invalid or missing program image, Permission denied"
+114,FATAL,BGL,1,"051209 121919 159559 FATAL BGL|RAS.APP: ciod: Error loading /p/gb1/stella/UMT2K/1372/umt2k_DD: invalid or missing program image, Permission denied"
+115,FATAL,BGL,1,"051209 123325 160405 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/SWL/stability/NEWS05/news05_DD: invalid or missing program image, Permission denied"
+116,FATAL,BGL,1,"051209 124853 161333 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/SWL/stability/HPL/WORK/1498./hpl_DD: invalid or missing program image, No such file or directory"
+117,FATAL,BGL,1,051211 191909 357549 FATAL BGL|RAS.APP: ciod: LOGIN chdir(/p/gb1/stella/RAPTOR/2183) failed: Input/output error
+118,FATAL,BGL,1,"051214 143321 599601 FATAL BGL|RAS.APP: ciod: Error loading /g/g0/spelce1/Tuned/SPaSM-base/rundir/SPaSM.baseline: invalid or missing program image, Permission denied"
+119,FATAL,BGL,1,"051221 072717 178837 FATAL BGL|RAS.APP: ciod: Error loading /g/g24/buber/Yunsic/BlueGene/partad.develf/taddriver.32.exe: program image too big, 361544528 > 266076160"
+120,FATAL,BGL,0,051225 224715 579635 FATAL BGL|RAS.KERNEL: fpr29=0xffffffff ffffffff ffffffff ffffffff
+121,FATAL,BGL,0,051226 051359 602839 FATAL BGL|RAS.KERNEL: Machine State Register: 0x0002f900
+122,FATAL,Hadoop,1,151018 180626 949460 FATAL Hadoop|org.apache.hadoop.mapred.TaskAttemptListenerImpl: Task: attempt_1445144423722_0020_m_000002_0 - exited : java.net.NoRouteToHostException: No Route to Host from  MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see:  http://wiki.apache.org/hadoop/NoRouteToHost
+123,INFO,BGL,0,050603 154250 838570 INFO BGL|RAS.KERNEL: instruction cache parity error corrected
+124,INFO,BGL,0,050606 195140 112700 INFO BGL|RAS.KERNEL: ciod: cpu 0 at treeaddr 438 sent unrecognized message 0xffffffff
+125,INFO,BGL,0,"050608 160220 271740 INFO BGL|RAS.KERNEL: 1 ddr errors(s) detected and corrected on rank 0, symbol 25, bit 1"
+126,INFO,BGL,0,050614 142733 784453 INFO BGL|RAS.KERNEL: total of 1 ddr error(s) detected and corrected
+127,INFO,BGL,0,050626 092647 803207 INFO BGL|RAS.KERNEL: program interrupt: privileged instruction...0
+128,INFO,BGL,0,050626 093453 803693 INFO BGL|RAS.KERNEL: program interrupt: unimplemented operation..0
+129,INFO,BGL,0,050626 093645 803805 INFO BGL|RAS.KERNEL: program interrupt: imprecise exception......0
+130,INFO,BGL,0,050626 102931 806971 INFO BGL|RAS.KERNEL: instruction address: 0x0062fe04
+131,INFO,BGL,1,050705 122211 591331 INFO BGL|RAS.KERNEL: ciod: Missing or invalid fields on line 1 of node map file /home/auselton/bgl/64mps.sequential.mapfile
+132,INFO,BGL,0,050706 065942 658382 INFO BGL|RAS.KERNEL: 1 torus receiver z+ input pipe error(s) (dcr 0x02f0) detected and corrected
+133,INFO,BGL,0,050714 231819 408299 INFO BGL|RAS.KERNEL: ciod: Z coordinate 32 exceeds physical dimension 32 at line 33 of node map file /p/gb2/pakin1/contention-32768cpes-torus/xyzt-1x1x32768x1.map
+134,INFO,BGL,0,050802 163220 25540 INFO BGL|NULL.DISCOVERY: New ido chip inserted into the database: FF:F2:9F:16:BF:6C:00:0D:60:E9:40:93 ip=10.5.0.46 v=13 t=4
+135,INFO,BGL,0,050802 212833 43313 INFO BGL|NULL.DISCOVERY: New ido chip inserted into the database: FF:F2:9F:16:C4:C2:00:0D:60:E9:3B:3D ip=10.2.1.37 v=13 t=4
+136,INFO,BGL,0,050804 153803 195083 INFO BGL|NULL.DISCOVERY: Ido chip status changed: FF:F2:9F:16:EB:27:00:0D:60:E9:14:D8 ip=10.0.2.192 v=13 t=4 status=M Thu Aug 04 15:29:45 PDT 2005
+137,INFO,BGL,0,050809 101641 607801 INFO BGL|NULL.DISCOVERY: Ido chip status changed: FF:F2:9F:16:DC:81:00:0D:60:E9:23:7E ip=10.6.1.207 v=13 t=4 status=M Tue Aug 09 10:08:23 PDT 2005
+138,INFO,BGL,0,050826 114733 82053 INFO BGL|RAS.KERNEL: iar 003a90fc dear 00b360e8
+139,INFO,BGL,0,050826 114800 82080 INFO BGL|RAS.KERNEL: iar 003a90dc dear 00b35148
+140,INFO,BGL,0,050826 115938 82778 INFO BGL|RAS.KERNEL: iar 003a9294 dear 00c06c48
+141,INFO,BGL,0,050826 121011 83411 INFO BGL|RAS.KERNEL: iar 003a929c dear 00efc768
+142,INFO,BGL,0,050826 122711 84431 INFO BGL|RAS.KERNEL: iar 003a9260 dear 012979b8
+143,INFO,BGL,0,050826 122726 84446 INFO BGL|RAS.KERNEL: iar 003a9260 dear 01299e48
+144,INFO,BGL,0,050828 030753 223673 INFO BGL|RAS.KERNEL: iar 00149ee0 dear 009a2788
+145,INFO,BGL,0,050828 031122 223882 INFO BGL|RAS.KERNEL: iar 00149f88 dear 0099be48
+146,INFO,BGL,0,050828 031557 224157 INFO BGL|RAS.KERNEL: iar 0014a150 dear 009a50f8
+147,INFO,BGL,0,050828 031727 224247 INFO BGL|RAS.KERNEL: iar 00149ee0 dear 0099e5e8
+148,INFO,BGL,0,050828 032045 224445 INFO BGL|RAS.KERNEL: iar 00149f88 dear 00996f88
+149,INFO,BGL,0,050828 032051 224451 INFO BGL|RAS.KERNEL: iar 0014a1e4 dear 0099e6c8
+150,INFO,BGL,0,050903 000153 730913 INFO BGL|RAS.KERNEL: 1 torus receiver x+ input pipe error(s) (dcr 0x02ec) detected and corrected
+151,INFO,BGL,1,"050920 115730 242650 INFO BGL|NULL.DISCOVERY: Node card VPD check: U01 node in processor card slot J15 do not match. VPD ecid 04DE7DB80D7BFFFF04051B70D8D9, found 04DE7DF2D37BFFFF09081B6088D9"
+152,INFO,BGL,1,"050920 124515 245515 INFO BGL|NULL.DISCOVERY: Node card VPD check: U01 node in processor card slot J08 do not match. VPD ecid 075F04E8A27BFFFF07021C3096ED, found 04D78137922FFFFF040E1C3052ED"
+153,INFO,BGL,0,050926 174611 781971 INFO BGL|RAS.KERNEL: ciod: generated 128 core files for program /bgl/apps/SWL/stability/DDCMD//ddcMDbglV
+154,INFO,BGL,0,050928 192237 960557 INFO BGL|RAS.KERNEL: ciod: generated 64 core files for program /home/spelce1/HPCC_IBM/TomAndJeff/bin/tested_copro/tested_copro.rts
+155,INFO,BGL,0,051003 162648 382008 INFO BGL|RAS.KERNEL: ciod: generated 108 core files for program /home/spelce1/HPCC_IBM/Urgent/VNM/32K/vnm.rts
+156,INFO,BGL,0,051017 050227 550547 INFO BGL|RAS.KERNEL: data cache search parity error detected. attempting to correct
+157,INFO,BGL,1,051025 085540 255740 INFO BGL|RAS.KERNEL: critical input interrupt (unit=0x0b bit=0x0b): warning for torus z- wire
+158,INFO,BGL,0,051103 144350 57830 INFO BGL|RAS.KERNEL: iar 00106210 dear 0244c1dc
+159,INFO,BGL,0,051103 144459 57899 INFO BGL|RAS.KERNEL: iar 00106210 dear 0244c20c
+160,INFO,BGL,0,051103 144513 57913 INFO BGL|RAS.KERNEL: iar 00106228 dear 0244c1ec
+161,INFO,BGL,0,051103 145329 58409 INFO BGL|RAS.KERNEL: iar 00105e94 dear 02f5883c
+162,INFO,BGL,0,051103 152202 60122 INFO BGL|RAS.KERNEL: iar 00106568 dear 02494bbc
+163,INFO,BGL,0,051104 085846 123526 INFO BGL|RAS.KERNEL: iar 00106570 dear 0245a10c
+164,INFO,BGL,0,051104 093223 125543 INFO BGL|RAS.KERNEL: iar 00106834 dear 0245ccfc
+165,INFO,BGL,0,051104 093949 125989 INFO BGL|RAS.KERNEL: iar 00106b8c dear 0245ce8c
+166,INFO,BGL,0,051104 094228 126148 INFO BGL|RAS.KERNEL: iar 00106bd8 dear 0245ceec
+167,INFO,BGL,0,051104 094258 126178 INFO BGL|RAS.KERNEL: iar 0010681c dear 02f692fc
+168,INFO,BGL,0,051104 094320 126200 INFO BGL|RAS.KERNEL: iar 00106b8c dear 0245cf5c
+169,INFO,BGL,0,051104 095139 126699 INFO BGL|RAS.KERNEL: iar 00106bd8 dear 0245cf0c
+170,INFO,BGL,0,051104 095218 126738 INFO BGL|RAS.KERNEL: iar 0010686c dear 02f6930c
+171,INFO,BGL,0,051104 100007 127207 INFO BGL|RAS.KERNEL: iar 00106704 dear 0245b80c
+172,INFO,BGL,0,051104 100107 127267 INFO BGL|RAS.KERNEL: iar 00106704 dear 0245d57c
+173,INFO,BGL,0,051104 100148 127308 INFO BGL|RAS.KERNEL: iar 001063a0 dear 02f67e4c
+174,INFO,BGL,0,051104 100600 127560 INFO BGL|RAS.KERNEL: iar 00106390 dear 02f67cfc
+175,INFO,BGL,0,051104 100605 127565 INFO BGL|RAS.KERNEL: iar 00106704 dear 0245b6bc
+176,INFO,BGL,0,051104 101434 128074 INFO BGL|RAS.KERNEL: iar 00105fd4 dear 0245a09c
+177,INFO,BGL,0,051104 104156 129716 INFO BGL|RAS.KERNEL: iar 0010650c dear 0246a95c
+178,INFO,BGL,0,051104 105552 130552 INFO BGL|RAS.KERNEL: iar 00106988 dear 02f7bd6c
+179,INFO,BGL,0,051104 105633 130593 INFO BGL|RAS.KERNEL: iar 00106cf8 dear 0246f9fc
+180,INFO,BGL,0,051104 133307 139987 INFO BGL|RAS.KERNEL: iar 001066ac dear 0252524c
+181,INFO,BGL,0,051104 135319 141199 INFO BGL|RAS.KERNEL: iar 001066c4 dear 025251fc
+182,INFO,BGL,0,051104 135325 141205 INFO BGL|RAS.KERNEL: iar 00106678 dear 0252523c
+183,INFO,BGL,0,051104 140502 141902 INFO BGL|RAS.KERNEL: iar 001007b8 dear 065b4c7c
+184,INFO,BGL,0,051104 140526 141926 INFO BGL|RAS.KERNEL: iar 001007a8 dear 065b4cac
+185,INFO,BGL,0,051104 142011 142811 INFO BGL|RAS.KERNEL: iar 001066ac dear 025252bc
+186,INFO,BGL,0,051104 153411 147251 INFO BGL|RAS.KERNEL: iar 00106570 dear 0245a5ec
+187,INFO,BGL,0,051104 155446 148486 INFO BGL|RAS.KERNEL: iar 00106348 dear 024696bc
+188,INFO,BGL,0,051108 100913 473353 INFO BGL|RAS.KERNEL: iar 001061e8 dear 0247012c
+189,INFO,BGL,0,051108 111859 477539 INFO BGL|RAS.KERNEL: iar 001061b4 dear 0247017c
+190,INFO,BGL,0,051109 162545 582345 INFO BGL|RAS.KERNEL: iar 00106448 dear 0246db5c
+191,INFO,BGL,0,051110 230341 692621 INFO BGL|RAS.KERNEL: iar 00106274 dear 0246da8c
+192,INFO,BGL,0,051110 230401 692641 INFO BGL|RAS.KERNEL: iar 00106448 dear 0246dacc
+193,INFO,BGL,0,051110 230409 692649 INFO BGL|RAS.KERNEL: iar 00106298 dear 02f7a18c
+194,INFO,BGL,0,051111 043952 712792 INFO BGL|RAS.KERNEL: ciod: generated 128 core files for program /bgl/apps/followup/SPaSM_static/SPaSM_mpi.new_comp
+195,INFO,BGL,1,"051115 054123 62083 INFO BGL|RAS.KERNEL: critical input interrupt (unit=0x0b bit=0x0a): warning for torus z+ wire, suppressing further interrupts of same type"
+196,INFO,BGL,0,051115 075303 69983 INFO BGL|RAS.KERNEL: ciod: generated 64 core files for program /bgl/apps/followup/hellow/a.out.1111
+197,INFO,BGL,1,"051115 094912 76952 INFO BGL|NULL.DISCOVERY: Node card VPD check: U11 node in processor card slot J10 do not match. VPD ecid 07570DD8002FFFFF09031B7090E2, found 04D480D8482FFFFF0A071BA052DE"
+198,INFO,BGL,0,051117 053526 234526 INFO BGL|RAS.KERNEL: 18507114 torus sender z- retransmission error(s) (dcr 0x02f9) detected and corrected over 198 seconds
+199,INFO,BGL,0,051204 090428 715868 INFO BGL|RAS.KERNEL: total of 1 ddr error(s) detected and corrected over 2487 seconds
+200,INFO,BGL,1,"051206 160430 913870 INFO BGL|RAS.KERNEL: critical input interrupt (unit=0x0b bit=0x17): warning for tree C1 wire, suppressing further interrupts of same type"
+201,INFO,BGL,0,051220 081520 95320 INFO BGL|RAS.KERNEL: ciod: generated 128 core files for program /g/g24/germann2/SPaSM_static/SPaSM_mpi
+202,INFO,BGL,0,060103 071309 301189 INFO BGL|RAS.KERNEL: ciod: generated 128 core files for program /g/g24/germann2/SPaSM_mini/MEAM/r13
+203,INFO,HDFS,0,081109 204005 35 INFO HDFS|dfs.FSNamesystem: BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.73.220:50010 is added to blk_7128370237687728475 size 67108864
+204,INFO,HDFS,0,081109 204815 653 INFO HDFS|dfs.DataNode$DataXceiver: Receiving block blk_5792489080791696128 src: /10.251.30.6:33145 dest: /10.251.30.6:50010
+205,INFO,HDFS,0,081109 205931 13 INFO HDFS|dfs.DataBlockScanner: Verification succeeded for blk_-4980916519894289629
+206,INFO,HDFS,0,081109 213837 19 INFO HDFS|dfs.FSDataset: Deleting block blk_1781953582842324563 file /mnt/hadoop/dfs/data/current/subdir5/blk_1781953582842324563
+207,INFO,HDFS,0,081109 234110 26 INFO HDFS|dfs.FSNamesystem: BLOCK* NameSystem.allocateBlock: /user/root/sortrand/_temporary/_task_200811092030_0002_r_000296_0/part-00296. blk_-6620182933895093708
+208,INFO,HDFS,0,081110 212510 19 INFO HDFS|dfs.FSNamesystem: BLOCK* ask 10.250.18.114:50010 to delete  blk_-5140072410813878235
+209,INFO,HDFS,0,081111 050334 20441 INFO HDFS|dfs.DataNode$DataXceiver: Received block blk_-4411589101766563890 src: /10.250.14.38:37362 dest: /10.250.14.38:50010 of size 67108864
+210,INFO,HDFS,0,081111 080934 19 INFO HDFS|dfs.FSNamesystem: BLOCK* ask 10.250.14.38:50010 to replicate blk_-7571492020523929240 to datanode(s) 10.251.122.38:50010
+211,INFO,ZookeeperFull,0,150729 174141 963173 INFO ZookeeperFull|main:QuorumPeerConfig@334: Defaulting to majority quorums
+212,INFO,Zookeeper,0,150729 174144 920420 INFO Zookeeper|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:FastLeaderElection@774: Notification time out: 3200
+213,INFO,ZookeeperFull,0,150729 174228 192148 INFO ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Learner@322: Getting a diff from the leader 0x0
+214,INFO,ZookeeperFull,0,150729 174228 301208 INFO ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:ZooKeeperServer@162: Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /var/lib/zookeeper/version-2 snapdir /var/lib/zookeeper/version-2
+215,INFO,ZookeeperFull,0,150729 174228 75114 INFO ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Learner@85: TCP NoDelay set to: true
+216,INFO,ZookeeperFull,0,150729 174228 934618 INFO ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100: Server environment:host.name=node1
+217,INFO,ZookeeperFull,0,150729 174228 934618 INFO ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100: Server environment:java.compiler=<NA>
+218,INFO,ZookeeperFull,0,150729 174228 934618 INFO ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100: Server environment:java.io.tmpdir=/tmp
+219,INFO,ZookeeperFull,0,150729 174228 934618 INFO ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100: Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+220,INFO,ZookeeperFull,0,150729 174228 934618 INFO ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100: Server environment:java.version=1.7.0_79
+221,INFO,ZookeeperFull,0,150729 174228 934618 INFO ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100: Server environment:os.version=3.16.0-30-generic
+222,INFO,ZookeeperFull,0,150729 193725 161050 INFO ZookeeperFull|SyncThread:1:FileTxnLog@199: Creating new log file: log.100000001
+223,INFO,Zookeeper,0,150729 195413 335346 INFO Zookeeper|NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@832: Client attempting to renew session 0x24ed93119420016 at /10.10.34.13:37115
+224,INFO,Zookeeper,0,150729 210141 794105 INFO Zookeeper|NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839: Client attempting to establish new session at /10.10.34.19:33425
+225,INFO,Zookeeper,0,150730 174358 934618 INFO Zookeeper|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100: Server environment:user.dir=/
+226,INFO,ZookeeperFull,0,150730 175238 707046 INFO ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:FollowerZooKeeperServer@139: Shutting down
+227,INFO,ZookeeperFull,0,150730 175549 540078 INFO ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Leader@58: TCP NoDelay set to: true
+228,INFO,ZookeeperFull,0,150730 175549 990885 INFO ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumPeer@750: LEADING
+229,INFO,Zookeeper,0,"150730 200634 80784 INFO Zookeeper|SessionTracker:ZooKeeperServer@325: Expiring session 0x24ede63a01b003b, timeout of 10000ms exceeded"
+230,INFO,Zookeeper,0,150730 235253 539604 INFO Zookeeper|main:QuorumPeer@933: minSessionTimeout set to -1
+231,INFO,Zookeeper,0,150810 182350 934618 INFO Zookeeper|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100: Server environment:java.vendor=Oracle Corporation
+232,INFO,Zookeeper,0,150810 182522 934618 INFO Zookeeper|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100: Server environment:user.name=zookeeper
+233,INFO,Zookeeper,0,150818 160918 490523 INFO Zookeeper|QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100: Server environment:java.class.path=/etc/zookeeper/conf:/usr/share/java/jline.jar:/usr/share/java/log4j-1.2.jar:/usr/share/java/xercesImpl.jar:/usr/share/java/xmlParserAPIs.jar:/usr/share/java/netty.jar:/usr/share/java/slf4j-api.jar:/usr/share/java/slf4j-log4j12.jar:/usr/share/java/zookeeper.jar
+234,INFO,Zookeeper,0,150818 160918 754544 INFO Zookeeper|LearnerHandler-/10.10.34.11:49928:Leader@598: Have quorum of supporters; starting up and setting last processed zxid: 0xb00000000
+235,INFO,Zookeeper,0,150820 171229 59810 INFO Zookeeper|QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:FinalRequestProcessor@415: shutdown of request processor complete
+236,INFO,Zookeeper,0,150825 111453 599584 INFO Zookeeper|LearnerHandler-/10.10.34.11:32976:LearnerHandler@395: Sending DIFF
+237,INFO,HadoopFull,0,151017 153804 878758 INFO HadoopFull|org.apache.hadoop.mapred.YarnChild: Executing with tokens:
+238,INFO,HadoopFull,0,151017 153804 878758 INFO HadoopFull|org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /tmp/hadoop-msrabi/nm-local-dir/usercache/msrabi/appcache/application_1445062781478_0011
+239,INFO,HadoopFull,0,151017 153804 878758 INFO HadoopFull|org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system started
+240,INFO,HadoopFull,0,"151017 153805 878758 INFO HadoopFull|org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id"
+241,INFO,HadoopFull,0,151017 153805 878758 INFO HadoopFull|org.apache.hadoop.mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+242,INFO,HadoopFull,0,151017 153805 878758 INFO HadoopFull|org.apache.hadoop.mapred.MapTask: Processing split: hdfs://msra-sa-41:9000/pageinput2.txt:0+134217728
+243,INFO,HadoopFull,0,151017 153805 878758 INFO HadoopFull|org.apache.hadoop.mapred.Task: Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@1153ed81
+244,INFO,HadoopFull,0,151017 153811 878758 INFO HadoopFull|org.apache.hadoop.mapred.MapTask: Spilling map output
+245,INFO,HadoopFull,0,151017 153811 878758 INFO HadoopFull|org.apache.hadoop.mapred.MapTask: bufstart = 0; bufend = 48233939; bufvoid = 104857600
+246,INFO,HadoopFull,0,151017 153811 878758 INFO HadoopFull|org.apache.hadoop.mapred.MapTask: kvstart = 26214396(104857584); kvend = 17301360(69205440); length = 8913037/6553600
+247,INFO,HadoopFull,0,151017 153812 520013 INFO HadoopFull|org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy: Opening proxy : MININT-75DGDAM1.fareast.corp.microsoft.com:51951
+248,INFO,HadoopFull,0,151017 154029 687506 INFO HadoopFull|org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned to reduce
+249,INFO,HadoopFull,0,151017 154029 942214 INFO HadoopFull|org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1445062781478_0011_r_000000 Task Transitioned from SCHEDULED to RUNNING
+250,INFO,HadoopFull,0,151017 154032 878758 INFO HadoopFull|org.apache.hadoop.mapred.ReduceTask: Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@35c7d3d3
+251,INFO,HadoopFull,0,151017 154033 616758 INFO HadoopFull|org.apache.hadoop.mapreduce.task.reduce.Fetcher: for url=13562/mapOutput?job=job_1445062781478_0011&reduce=0&map=attempt_1445062781478_0011_m_000005_0 sent hash and received reply
+252,INFO,HadoopFull,0,151017 154033 616758 INFO HadoopFull|org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: attempt_1445062781478_0011_m_000005_0: Shuffling to disk since 60514806 is greater than maxSingleShuffleLimit (35232152)
+253,INFO,HadoopFull,0,151017 154033 878906 INFO HadoopFull|org.apache.hadoop.mapreduce.task.reduce.OnDiskMapOutput: Read 56695790 bytes from map-output for attempt_1445062781478_0011_m_000009_0
+254,INFO,HadoopFull,0,151017 154033 878906 INFO HadoopFull|org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: MSRA-SA-39.fareast.corp.microsoft.com:13562 freed by fetcher#5 in 827ms
+255,INFO,HadoopFull,0,151017 154033 980704 INFO HadoopFull|org.apache.hadoop.mapreduce.task.reduce.EventFetcher: attempt_1445062781478_0011_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events
+256,INFO,HadoopFull,0,151017 154127 878758 INFO HadoopFull|org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: finalMerge called with 0 in-memory map-outputs and 10 on-disk map-outputs
+257,INFO,HadoopFull,0,151017 154150 613549 INFO HadoopFull|org.apache.hadoop.hdfs.DFSClient: Abandoning BP-1347369012-10.190.173.170-1444972147527:blk_1073742515_1710
+258,INFO,HadoopFull,0,151017 154150 613549 INFO HadoopFull|org.apache.hadoop.hdfs.DFSClient: Excluding datanode 10.86.164.9:50010
+259,INFO,HadoopFull,0,151017 154246 391264 INFO HadoopFull|org.apache.hadoop.mapred.TaskAttemptListenerImpl: Done acknowledgement from attempt_1445062781478_0011_r_000000_0
+260,INFO,HadoopFull,0,151017 154246 456800 INFO HadoopFull|org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: Result of canCommit for attempt_1445062781478_0011_r_000000_0:true
+261,INFO,HadoopFull,0,151017 154246 942214 INFO HadoopFull|org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Calling handler for JobFinishedEvent
+262,INFO,HadoopFull,0,151017 154246 942214 INFO HadoopFull|org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: Task succeeded with attempt attempt_1445062781478_0011_r_000000_0
+263,INFO,HadoopFull,0,151017 154246 942214 INFO HadoopFull|org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: attempt_1445062781478_0011_r_000000_0 given a go for committing the task output.
+264,INFO,HadoopFull,0,151017 154246 942214 INFO HadoopFull|org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1445062781478_0011_r_000000 Task Transitioned from RUNNING to SUCCEEDED
+265,INFO,HadoopFull,0,151017 154246 993816 INFO HadoopFull|org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Stopped JobHistoryEventHandler. super.stop()
+266,INFO,HadoopFull,0,151017 154246 993816 INFO HadoopFull|org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Calling stop for all the services
+267,INFO,HadoopFull,0,151017 154246 993816 INFO HadoopFull|org.apache.hadoop.mapreduce.v2.app.MRAppMaster: We are finishing cleanly so this is the last retry
+268,INFO,HadoopFull,0,151017 154246 993816 INFO HadoopFull|org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: RMCommunicator notified that shouldUnregistered is: true
+269,INFO,HadoopFull,0,151017 154247 993816 INFO HadoopFull|org.apache.hadoop.ipc.Server: Stopping server on 47468
+270,INFO,HadoopFull,0,151017 154247 993816 INFO HadoopFull|org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Final Stats: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:1 CompletedMaps:10 CompletedReds:0 ContAlloc:13 ContRel:0 HostLocal:12 RackLocal:0
+271,INFO,HadoopFull,0,151017 154352 687506 INFO HadoopFull|org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Going to preempt 1 due to lack of space for maps
+272,INFO,HadoopFull,0,151017 154522 616758 INFO HadoopFull|org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: MININT-FNANLI5.fareast.corp.microsoft.com:13562 freed by fetcher#1 in 49273ms
+273,INFO,HadoopFull,0,151017 154529 323402 INFO HadoopFull|org.apache.hadoop.ipc.Client: Retrying connect to server: 04DN8IQ.fareast.corp.microsoft.com/10.86.164.9:64484. Already tried 0 time(s); maxRetries=45
+274,INFO,HadoopFull,0,151017 154935 878758 INFO HadoopFull|org.apache.hadoop.metrics2.impl.MetricsSystemImpl: ReduceTask metrics system shutdown complete.
+275,INFO,HadoopFull,0,151017 154935 878758 INFO HadoopFull|org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Stopping ReduceTask metrics system...
+276,INFO,HadoopFull,0,151017 155328 878758 INFO HadoopFull|org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Previous history file is at hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445062781478_0013/job_1445062781478_0013_1.jhist
+277,INFO,HadoopFull,0,151017 155329 878758 INFO HadoopFull|org.apache.hadoop.mapreduce.v2.app.client.MRClientService: Instantiated MRClientService at MININT-75DGDAM1.fareast.corp.microsoft.com/10.86.165.66:52871
+278,INFO,Hadoop,0,151018 180150 878758 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.MRAppMaster: OutputCommitter set in config null
+279,INFO,Hadoop,0,151018 180150 878758 INFO Hadoop|org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.jobhistory.EventType for class org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler
+280,INFO,Hadoop,0,151018 180150 878758 INFO Hadoop|org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncher$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$ContainerLauncherRouter
+281,INFO,Hadoop,0,151018 180151 878758 INFO Hadoop|org.apache.hadoop.http.HttpServer2: Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+282,INFO,Hadoop,0,151018 180151 878758 INFO Hadoop|org.apache.hadoop.http.HttpServer2: adding path spec: /ws/*
+283,INFO,Hadoop,0,151018 180151 878758 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Not uberizing job_1445144423722_0020 because: not enabled; too many maps; too much input;
+284,INFO,Hadoop,0,151018 180151 878758 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Number of reduces for job job_1445144423722_0020 = 1
+285,INFO,Hadoop,0,151018 180151 878758 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: job_1445144423722_0020Job Transitioned from NEW to INITED
+286,INFO,Hadoop,0,151018 180151 878758 INFO Hadoop|org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+287,INFO,Hadoop,0,151018 180151 878758 INFO Hadoop|org.mortbay.log: jetty-6.1.26
+288,INFO,Hadoop,0,151018 180151 972605 INFO Hadoop|org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 62260
+289,INFO,Hadoop,0,151018 180152 878758 INFO Hadoop|org.apache.hadoop.yarn.webapp.WebApps: Web app /mapreduce started at 62267
+290,INFO,Hadoop,0,151018 180153 878758 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: maxTaskFailuresPerNode is 3
+291,INFO,Hadoop,0,151018 180153 878758 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: nodeBlacklistingEnabled:true
+292,INFO,Hadoop,0,151018 180153 942214 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1445144423722_0020_m_000000 Task Transitioned from NEW to SCHEDULED
+293,INFO,Hadoop,0,151018 180153 942214 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.speculate.DefaultSpeculator: JOB_CREATE job_1445144423722_0020
+294,INFO,Hadoop,0,"151018 180154 687506 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:10240, vCores:-17>"
+295,INFO,Hadoop,0,"151018 180154 687506 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: getResources() for application_1445144423722_0020: ask=4 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:10240, vCores:-17> knownNMs=4"
+296,INFO,Hadoop,0,151018 180156 687506 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container container_1445144423722_0020_01_000002 to attempt_1445144423722_0020_m_000000_0
+297,INFO,Hadoop,0,151018 180157 942214 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Adding #0 tokens and #1 secret keys for NM use for launching container
+298,INFO,Hadoop,0,151018 180157 942214 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Putting shuffle token in serviceData
+299,INFO,Hadoop,0,151018 180157 942214 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: The job-conf file on the remote FS is /tmp/hadoop-yarn/staging/msrabi/.staging/job_1445144423722_0020/job.xml
+300,INFO,Hadoop,0,151018 180157 942214 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445144423722_0020/job.jar
+301,INFO,Hadoop,0,151018 180158 323402 INFO Hadoop|org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy: Opening proxy : MININT-FNANLI5.fareast.corp.microsoft.com:52368
+302,INFO,Hadoop,0,151018 180158 687506 INFO Hadoop|org.apache.hadoop.yarn.util.RackResolver: Resolved MININT-FNANLI5.fareast.corp.microsoft.com to /default-rack
+303,INFO,Hadoop,0,151018 180202 103678 INFO Hadoop|SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for job_1445144423722_0020 (auth:SIMPLE)
+304,INFO,Hadoop,0,151018 180202 949460 INFO Hadoop|org.apache.hadoop.mapred.TaskAttemptListenerImpl: JVM with ID: jvm_1445144423722_0020_m_000002 given task: attempt_1445144423722_0020_m_000000_0
+305,INFO,Hadoop,0,151018 180247 454476 INFO Hadoop|org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy: Opening proxy : MSRA-SA-41.fareast.corp.microsoft.com:7109
+306,INFO,Hadoop,0,151018 180450 942214 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Num completed Tasks: 1
+307,INFO,Hadoop,0,151018 180450 942214 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: Task succeeded with attempt attempt_1445144423722_0020_m_000003_0
+308,INFO,Hadoop,0,151018 180626 613547 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Added attempt_1445144423722_0020_m_000002_1 to list of failed maps
+309,INFO,Hadoop,1,151018 180626 949460 INFO Hadoop|org.apache.hadoop.mapred.TaskAttemptListenerImpl: Diagnostics report from attempt_1445144423722_0020_m_000002_0: Error: java.net.NoRouteToHostException: No Route to Host from  MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see:  http://wiki.apache.org/hadoop/NoRouteToHost
+310,INFO,Spark,0,"170609 201040 525283 INFO Spark|spark.SecurityManager: Changing modify acls to: yarn,curi"
+311,INFO,Spark,0,170609 201041 304390 INFO Spark|Remoting: Remoting started; listening on addresses :[akka.tcp://sparkExecutorActorSystem@mesos-slave-07:55904]
+312,INFO,Spark,0,170609 201041 623978 INFO Spark|storage.MemoryStore: MemoryStore started with capacity 17.7 GB
+313,INFO,Spark,0,170609 201041 833269 INFO Spark|slf4j.Slf4jLogger: Slf4jLogger started
+314,INFO,Spark,0,170609 201042 107948 INFO Spark|executor.CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@10.10.34.11:48069
+315,INFO,Spark,0,170609 201042 237741 INFO Spark|executor.Executor: Starting executor ID 5 on host mesos-slave-07
+316,INFO,Spark,0,170609 201045 16419 INFO Spark|broadcast.TorrentBroadcast: Started reading broadcast variable 9
+317,INFO,Spark,0,"170609 201046 623978 INFO Spark|storage.MemoryStore: Block broadcast_9 stored as values in memory (estimated size 8.8 KB, free 14.0 KB)"
+318,INFO,Spark,0,170609 201046 926110 INFO Spark|rdd.HadoopRDD: Input split: hdfs://10.10.34.11:9000/pjhe/logs/2kSOSP.log:21876+7292
+319,INFO,Spark,0,"170609 201047 174037 INFO Spark|Configuration.deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id"
+320,INFO,Spark,0,"170609 201047 174037 INFO Spark|Configuration.deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap"
+321,INFO,Spark,0,"170609 201048 623978 INFO Spark|storage.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 384.0 B, free 317.5 KB)"
+322,INFO,Spark,0,"170609 201048 886989 INFO Spark|python.PythonRunner: Times: total = 1072, boot = 856, init = 210, finish = 6"
+323,WARN,BGL,1,050628 095339 977619 WARN BGL|NULL.DISCOVERY: Node card is not fully functional
+324,WARN,BGL,0,"050805 102313 262593 WARN BGL|NULL.HARDWARE: PrepareForService shutting down NodeCard(mLctn(R25-M1-N2), mCardSernum(203231503833343000000000594c31304b34333431303158), mLp(FF:F2:9F:16:CF:0F:00:0D:60:E9:30:F0), mIp(10.2.2.80), mType(4)) as part of Service Action 310"
+325,WARN,BGL,0,"051203 092959 630999 WARN BGL|NULL.HARDWARE: PrepareForService shutting down Node card(mLctn(R10-M1-N2), mCardSernum(203231503833343000000000594c31304b34323934303257), mLp(FF:F2:9F:16:E0:DA:00:0D:60:E9:1F:25), mIp(10.1.1.164), mType(4)) as part of Service Action 648"
+326,WARN,HDFS,1,081109 214043 2561 WARN HDFS|dfs.DataNode$DataXceiver: 10.251.30.85:50010:Got exception while serving blk_-2918118818249673980 to /10.251.90.64:
+327,WARN,Zookeeper,0,150729 190429 103727 WARN Zookeeper|SendWorker:188978561024:QuorumCnxManager$SendWorker@679: Interrupted while waiting for message on queue
+328,WARN,Zookeeper,0,150729 190429 169263 WARN Zookeeper|SendWorker:188978561024:QuorumCnxManager$SendWorker@688: Send worker leaving thread
+329,WARN,Zookeeper,0,"150729 191324 648116 WARN Zookeeper|RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762: Connection broken for id 188978561024, my id = 1, error ="
+330,WARN,Zookeeper,0,150729 191407 844727 WARN Zookeeper|RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765: Interrupting SendWorker
+331,WARN,ZookeeperFull,0,150729 193725 125848 WARN ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Follower@118: Got zxid 0x100000001 expected 0x1
+332,WARN,Zookeeper,0,150729 195205 402846 WARN Zookeeper|NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349: caught end of stream exception
+333,WARN,ZookeeperFull,1,150729 195310 367843 WARN ZookeeperFull|SendWorker:3:QuorumCnxManager$SendWorker@684: Exception when using channel: for id 3 my id = 1 error = java.net.SocketException: Broken pipe
+334,WARN,Zookeeper,0,150730 161201 990712 WARN Zookeeper|NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793: Connection request from old client /10.10.34.19:33442; will be dropped if server is in r-o mode
+335,WARN,ZookeeperFull,0,"150730 175238 126612 WARN ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Learner@232: Unexpected exception, tries=0, connecting to /10.10.34.13:2888"
+336,WARN,ZookeeperFull,1,150730 175238 947887 WARN ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Follower@89: Exception when following the leader
+337,WARN,Zookeeper,0,150730 175526 961341 WARN Zookeeper|WorkerSender[myid=1]:QuorumCnxManager@368: Cannot open channel to 2 at election address /10.10.34.12:3888
+338,WARN,ZookeeperFull,0,150730 175549 693602 WARN ZookeeperFull|LearnerHandler-/10.10.34.12:35276:Leader@574: Commiting zxid 0x300000000 from /10.10.34.11:2888 not first!
+339,WARN,Zookeeper,0,150730 234322 864029 WARN Zookeeper|LearnerHandler-/10.10.34.12:35276:LearnerHandler@575: ******* GOODBYE /10.10.34.12:35276 ********
+340,WARN,Zookeeper,0,150730 234458 333698 WARN Zookeeper|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368: Cannot open channel to 2 at election address /10.10.34.12:3888
+341,WARN,Zookeeper,1,150820 171411 206234 WARN Zookeeper|NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@354: Exception causing close of session 0x0 due to java.io.IOException: ZooKeeperServer not running
+342,WARN,Zookeeper,0,150820 171413 615707 WARN Zookeeper|LearnerHandler-/10.10.34.13:42241:Leader@576: First is 0x0
+343,WARN,HadoopFull,0,151017 154112 93771 WARN HadoopFull|org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: Could not delete hdfs://msra-sa-41:9000/pageout/out1/_temporary/1/_temporary/attempt_1445062781478_0011_m_000007_1
+344,WARN,HadoopFull,1,"151017 154414 878758 WARN HadoopFull|org.apache.hadoop.mapred.Task: Failure sending status update: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: ""MININT-FNANLI5/10.86.169.121""; destination host is: ""04dn8iq.fareast.corp.microsoft.com"":49470;"
+345,WARN,HadoopFull,0,151017 155328 878758 WARN HadoopFull|org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Could not parse the old history file. Will not have old AMinfos
+346,WARN,HadoopFull,1,"151017 155328 878758 WARN HadoopFull|org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Unable to parse prior job history, aborting recovery"
+347,WARN,Hadoop,0,151018 180527 494724 WARN Hadoop|org.apache.hadoop.hdfs.LeaseRenewer: Failed to renew lease for [DFSClient_NONMAPREDUCE_1537864556_1] for 30 seconds.  Will retry shortly ...
+348,WARN,Hadoop,0,151018 180527 494724 WARN Hadoop|org.apache.hadoop.ipc.Client: Address change detected. Old: msra-sa-41/10.190.173.170:9000 New: msra-sa-41:9000
+349,WARN,Hadoop,1,151018 180557 272219 WARN Hadoop|org.apache.hadoop.hdfs.DFSClient: DataStreamer Exception
+350,WARN,Hadoop,1,"151018 180557 272219 WARN Hadoop|org.apache.hadoop.hdfs.DFSClient: Error Recovery for block BP-1347369012-10.190.173.170-1444972147527:blk_1073743512_2731 in pipeline 10.86.169.121:50010, 10.190.173.170:50010: bad datanode 10.190.173.170:50010"
+351,WARN,Hadoop,1,151018 180557 790847 WARN Hadoop|org.apache.hadoop.hdfs.DFSClient: DFSOutputStream ResponseProcessor exception  for block BP-1347369012-10.190.173.170-1444972147527:blk_1073743512_2731
+352,WARN,Hadoop,1,"151018 180557 790847 WARN Hadoop|org.apache.hadoop.hdfs.DFSClient: Slow ReadProcessor read fields took 65020ms (threshold=30000ms); ack: seqno: -2 status: SUCCESS status: ERROR downstreamAckTimeNanos: 0, targets: [10.86.169.121:50010, 10.190.173.170:50010]"
+353,WARN,Hadoop,1,151018 180626 93771 WARN Hadoop|org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventHandler: Task cleanup failed for attempt attempt_1445144423722_0020_m_000002_0

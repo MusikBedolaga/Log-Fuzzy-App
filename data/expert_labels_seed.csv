@@ -1,0 +1,133 @@
+id,level,system,label,note,raw_line
+0,FATAL,BGL,0,"дамп регистра (machine state) — телеметрия, не сбой",050614 103726 770646 FATAL BGL|RAS.KERNEL: machine state register: 0x00002000
+1,FATAL,BGL,1,,"050711 125451 111691 FATAL BGL|RAS.APP: ciod: Error loading /home/greeno/raptor.new.dev.3d.BGL.CXX_XL.MPI.ex: invalid or missing program image, No such file or directory"
+2,FATAL,BGL,0,дамп состояния кэша — телеметрия,050614 105848 771928 FATAL BGL|RAS.KERNEL: guaranteed data cache block touch........1
+3,FATAL,BGL,0,поле data store interrupt (=0) — телеметрия,050614 104158 770918 FATAL BGL|RAS.KERNEL: data store interrupt caused by icbi.........0
+4,FATAL,BGL,0,поле выравнивания (=0) — телеметрия,050605 081046 984246 FATAL BGL|RAS.KERNEL: force load/store alignment...............0
+5,FATAL,BGL,0,дамп exception syndrome register — телеметрия,050614 101850 769530 FATAL BGL|RAS.KERNEL: exception syndrome register: 0x00800000
+6,FATAL,BGL,0,дамп core config register — телеметрия,050614 105208 771528 FATAL BGL|RAS.KERNEL: core configuration register: 0x00002000
+7,FATAL,BGL,1,,"051013 050214 204934 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/followup/SPASM/spasm.254: invalid or missing program image, Permission denied"
+8,FATAL,BGL,1,,"050812 232512 914312 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/scaletest/performance/MINIBEN/mb_243_0810/allreduce.rts: invalid or missing program image, Exec format error"
+9,FATAL,BGL,1,,"051103 084746 36466 FATAL BGL|RAS.APP: ciod: Error loading /home.old/glosli/src/ddcMD/ddcMD1.1.18a/bin/ddcMDGbglV: invalid or missing program image, No such file or directory"
+10,FATAL,BGL,1,,"051115 192118 111278 FATAL BGL|RAS.KERNEL: Error receiving packet on tree network, expecting type 57 instead of type 3 (softheader=009756d5 8bfa0003 00000002 00000000) PSR0=20021f01 PSR1=00000000 PRXF=00000002 PIXF=00000007"
+11,FATAL,BGL,1,,"051020 080309 820589 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/followup/RAPTOR/new.raptor.trace: invalid or missing program image, Exec format error"
+12,FATAL,BGL,1,,"051209 121416 159256 FATAL BGL|RAS.APP: ciod: Error loading /p/gb1/stella/SPPM/1322/sppm_DD: invalid or missing program image, Permission denied"
+13,FATAL,BGL,1,,"051114 182541 21541 FATAL BGL|RAS.KERNEL: Error receiving packet on tree network, expecting type 57 instead of type 3 (softheader=00ce22e8 e6200003 00000002 00000000) PSR0=00001f01 PSR1=00000000 PRXF=00000002 PIXF=00000007"
+14,FATAL,BGL,0,порог icache prefetch (=0) — телеметрия,050614 110202 772122 FATAL BGL|RAS.KERNEL: icache prefetch threshold................0
+15,FATAL,BGL,1,,050815 214519 167519 FATAL BGL|RAS.KERNEL: rts: kernel terminated for reason 1003
+16,FATAL,BGL,1,,"051103 070248 30168 FATAL BGL|RAS.APP: ciod: Error loading /g/g0/spelce1/HPCC_IBM/Urgent/COP/64K/RandomAccess.64R.rts: invalid or missing program image, Permission denied"
+17,FATAL,BGL,0,поле program interrupt (=0) — статус-дамп,050614 094301 767381 FATAL BGL|RAS.KERNEL: program interrupt: illegal instruction......0
+18,FATAL,BGL,1,,050714 162022 383222 FATAL BGL|RAS.APP: ciod: Error creating node map from file /home/pakin1/sweep3d-2.2b/results/random1-8x32x32x2.map: Permission denied
+19,FATAL,BGL,1,,"050620 162353 309833 FATAL BGL|RAS.APP: ciod: Error loading /home/draeger/testQboxhang-nozerobytebug-nosleepyescomm: invalid or missing program image, No such file or directory"
+20,FATAL,BGL,1,,050831 222953 552593 FATAL BGL|RAS.KERNEL: Lustre mount FAILED : bglio559 : point /p/gb1
+21,FATAL,BGL,1,,050823 045428 798068 FATAL BGL|RAS.APP: ciod: LOGIN chdir(/home/germann2/BGL-demo) failed: No such file or directory
+22,FATAL,BGL,1,,051211 191909 357549 FATAL BGL|RAS.APP: ciod: LOGIN chdir(/p/gb1/stella/RAPTOR/2183) failed: Input/output error
+23,FATAL,BGL,1,,"050920 180115 264475 FATAL BGL|RAS.APP: ciod: Error loading /home/yates//broadcast.rts: invalid or missing program image, No such file or directory"
+24,FATAL,BGL,1,,050920 181514 265314 FATAL BGL|RAS.APP: ciod: LOGIN chdir(/bgl/apps/SWL/performance/MINIBEN///2005.09.20-18.06.05) failed: No such file or directory
+25,FATAL,BGL,1,,"051001 053837 170317 FATAL BGL|RAS.APP: ciod: Error loading /home/spelce1/HPCC_IBM/Urgent/Gunnels/VNM64/vnm.rts: invalid or missing program image, Permission denied"
+26,FATAL,BGL,1,,050903 050910 749350 FATAL BGL|RAS.APP: ciod: LOGIN chdir(/LAPACK_440d/BLAS) failed: No such file or directory
+27,FATAL,BGL,1,,"051117 050215 232535 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/followup/SPaSM_static/SPaSM.460-1115: invalid or missing program image, Permission denied"
+28,FATAL,BGL,0,поле floating pt (=0) — телеметрия,050614 104515 771115 FATAL BGL|RAS.KERNEL: floating pt ex mode 0 enable......0
+29,FATAL,BGL,1,,050614 111527 772927 FATAL BGL|RAS.KERNEL: rts internal error
+30,FATAL,BGL,1,,051121 042318 575798 FATAL BGL|RAS.KERNEL: Lustre mount FAILED : bglio78 : block_id : location
+31,FATAL,BGL,0,поле debug wait enable (=0) — телеметрия,050614 112052 773252 FATAL BGL|RAS.KERNEL: debug wait enable.................0
+32,FATAL,BGL,1,,"050920 180746 264866 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/SWL/performance/MINIBEN//bandwidth.rts: invalid or missing program image, No such file or directory"
+33,FATAL,BGL,0,поле program interrupt (=0) — статус-дамп,050614 104739 771259 FATAL BGL|RAS.KERNEL: program interrupt: unimplemented operation..0
+34,FATAL,BGL,1,,"050718 155326 727206 FATAL BGL|RAS.KERNEL: rts: kernel terminated for reason 1001rts: bad message header: invalid cpu, type=42315, cpu=105, index=1207960804, total=2691015"
+35,FATAL,BGL,0,поле data store interrupt (=0) — телеметрия,050614 102631 769991 FATAL BGL|RAS.KERNEL: data store interrupt caused by dcbf.........0
+36,FATAL,BGL,1,,050809 120932 614572 FATAL BGL|RAS.KERNEL: rts tree/torus link training failed: wanted: B C X+ X- Y+ Y- Z+ Z- got: B C X- Y- Z+ Z-
+37,FATAL,BGL,1,,050902 063517 668117 FATAL BGL|RAS.APP: ciod: LOGIN chdir(/bglscratch/bwallen/SWL/SYS-CALLS/testcases/kernel/syscalls/truncate) failed: No such file or directory
+38,FATAL,BGL,1,,"051209 123325 160405 FATAL BGL|RAS.APP: ciod: Error loading /bgl/apps/SWL/stability/NEWS05/news05_DD: invalid or missing program image, Permission denied"
+39,FATAL,BGL,1,,050822 074655 722015 FATAL BGL|RAS.APP: ciod: LOGIN chdir(/home/germann2/SPaSM_static) failed: No such file or directory
+40,FATAL,BGL,0,дамп data address — телеметрия,050614 093655 767015 FATAL BGL|RAS.KERNEL: data address: 0x00000002
+41,FATAL,BGL,1,,050919 140353 163833 FATAL BGL|RAS.APP: ciod: LOGIN chdir(/home/yates/SWL_tests/BGL64k_SWL_tests_develop/MPI-VAL/MPITs_v050902/rundir) failed: No such file or directory
+42,FATAL,Hadoop,1,,151018 180626 949460 FATAL Hadoop|org.apache.hadoop.mapred.TaskAttemptListenerImpl: Task: attempt_1445144423722_0020_m_000002_0 - exited : java.net.NoRouteToHostException: No Route to Host from  MININT-FNANLI5/127.0.0.1 to msra-sa-41:9000 failed on socket timeout exception: java.net.NoRouteToHostException: No route to host: no further information; For more details see:  http://wiki.apache.org/hadoop/NoRouteToHost
+43,FATAL,BGL,1,,050814 190239 71359 FATAL BGL|RAS.APP: ciod: Error reading message prefix after LOAD_MESSAGE on CioStream socket to 172.16.96.116:42213: Link has been severed
+44,FATAL,BGL,0,дамп Machine State Register — телеметрия,051226 051359 602839 FATAL BGL|RAS.KERNEL: Machine State Register: 0x0002f900
+45,ERROR,BGL,1,,050701 110531 241131 ERROR BGL|NULL.DISCOVERY: Can not get assembly information for node card
+46,ERROR,Hadoop,0,unknown container id — известная безобидная гонка YARN,151018 180411 687506 ERROR Hadoop|org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Container complete event for unknown container id container_1445144423722_0020_01_000012
+47,ERROR,BGL,1,,"050803 161102 110662 ERROR BGL|RAS.MMCS: idoproxydb hit ASSERT condition: ASSERT expression=0 Source file=idotransportmgr.cpp Source line=1043 Function=int IdoTransportMgr::SendPacket(IdoUdpMgr*, BglCtlPavTrace*)"
+48,ERROR,Hadoop,1,,"151018 180626 160608 ERROR Hadoop|org.apache.hadoop.yarn.YarnUncaughtExceptionHandler: Thread Thread[eventHandlingThread,5,main] threw an Exception."
+49,ERROR,Zookeeper,1,,150729 234428 619036 ERROR Zookeeper|CommitProcessor:1:NIOServerCnxn@180: Unexpected Exception:
+50,ERROR,Zookeeper,1,,150729 190335 264145 ERROR Zookeeper|LearnerHandler-/10.10.34.11:52225:LearnerHandler@562: Unexpected exception causing shutdown while sock still open
+51,ERROR,BGL,1,,050802 163914 25954 ERROR BGL|NULL.HARDWARE: NodeCard is not fully functional
+52,ERROR,BGL,1,,050804 102746 176466 ERROR BGL|NULL.DISCOVERY: Node card status: no ALERTs are active. Clock Mode is Low. Clock Select is Midplane. Phy JTAG Reset is asserted. ASIC JTAG Reset is asserted. Temperature Mask is not active. No temperature error. Temperature Limit Error Latch is clear. PGOOD IS NOT ASSERTED. PGOOD ERROR LATCH IS ACTIVE. MPGOOD IS NOT OK. MPGOOD ERROR LATCH IS ACTIVE. The 2.5 volt rail is OK. The 1.5 volt rail is OK.
+53,ERROR,BGL,1,,"050802 175807 30687 ERROR BGL|NULL.DISCOVERY: Node card status: ALERT 0, ALERT 1, ALERT 2, ALERT 3 is (are) active. Clock Mode is Low. Clock Select is Midplane. Phy JTAG Reset is asserted. ASIC JTAG Reset is not asserted. Temperature Mask is not active. No temperature error. Temperature Limit Error Latch is clear. PGOOD is asserted. PGOOD error latch is clear. MPGOOD is OK. MPGOOD error latch is clear. The 2.5 volt rail is OK. The 1.5 volt rail is OK."
+54,ERROR,Hadoop,1,,151018 180626 160608 ERROR Hadoop|org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Error writing History Event: org.apache.hadoop.mapreduce.jobhistory.TaskAttemptUnsuccessfulCompletionEvent@7317849d
+55,ERROR,Hadoop,1,,151018 180601 687506 ERROR Hadoop|org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: ERROR IN CONTACTING RM.
+56,WARN,Zookeeper,1,,150820 171411 206234 WARN Zookeeper|NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@354: Exception causing close of session 0x0 due to java.io.IOException: ZooKeeperServer not running
+57,WARN,HadoopFull,1,,"151017 154414 878758 WARN HadoopFull|org.apache.hadoop.mapred.Task: Failure sending status update: java.io.IOException: Failed on local exception: java.io.IOException: An existing connection was forcibly closed by the remote host; Host Details : local host is: ""MININT-FNANLI5/10.86.169.121""; destination host is: ""04dn8iq.fareast.corp.microsoft.com"":49470;"
+58,WARN,Zookeeper,0,ZK election: cannot open channel — рутинная сетевая болтовня,150730 175526 961341 WARN Zookeeper|WorkerSender[myid=1]:QuorumCnxManager@368: Cannot open channel to 2 at election address /10.10.34.12:3888
+59,WARN,Zookeeper,0,ZK Interrupting SendWorker — рутинный поток выборов,150729 191407 844727 WARN Zookeeper|RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765: Interrupting SendWorker
+60,WARN,HadoopFull,1,,"151017 155328 878758 WARN HadoopFull|org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Unable to parse prior job history, aborting recovery"
+61,WARN,Hadoop,1,,151018 180626 93771 WARN Hadoop|org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventHandler: Task cleanup failed for attempt attempt_1445144423722_0020_m_000002_0
+62,WARN,ZookeeperFull,0,"ZK connect tries=0 — первая попытка, транзиентно","150730 175238 126612 WARN ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Learner@232: Unexpected exception, tries=0, connecting to /10.10.34.13:2888"
+63,WARN,Zookeeper,0,ZK Leader First is 0x0 — рутинный протокол,150820 171413 615707 WARN Zookeeper|LearnerHandler-/10.10.34.13:42241:Leader@576: First is 0x0
+64,WARN,HDFS,1,,081109 214043 2561 WARN HDFS|dfs.DataNode$DataXceiver: 10.251.30.85:50010:Got exception while serving blk_-2918118818249673980 to /10.251.90.64:
+65,WARN,ZookeeperFull,1,,150729 195310 367843 WARN ZookeeperFull|SendWorker:3:QuorumCnxManager$SendWorker@684: Exception when using channel: for id 3 my id = 1 error = java.net.SocketException: Broken pipe
+66,WARN,Zookeeper,0,ZK election channel — рутина,150730 234458 333698 WARN Zookeeper|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368: Cannot open channel to 2 at election address /10.10.34.12:3888
+67,WARN,Hadoop,1,,"151018 180557 272219 WARN Hadoop|org.apache.hadoop.hdfs.DFSClient: Error Recovery for block BP-1347369012-10.190.173.170-1444972147527:blk_1073743512_2731 in pipeline 10.86.169.121:50010, 10.190.173.170:50010: bad datanode 10.190.173.170:50010"
+68,WARN,ZookeeperFull,0,ZK zxid mismatch — транзиентная ресинхронизация,150729 193725 125848 WARN ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Follower@118: Got zxid 0x100000001 expected 0x1
+69,WARN,Hadoop,1,,151018 180557 272219 WARN Hadoop|org.apache.hadoop.hdfs.DFSClient: DataStreamer Exception
+70,WARN,Hadoop,1,,"151018 180557 790847 WARN Hadoop|org.apache.hadoop.hdfs.DFSClient: Slow ReadProcessor read fields took 65020ms (threshold=30000ms); ack: seqno: -2 status: SUCCESS status: ERROR downstreamAckTimeNanos: 0, targets: [10.86.169.121:50010, 10.190.173.170:50010]"
+71,WARN,ZookeeperFull,0,"ZK zxid not first — предупреждение протокола, безобидно",150730 175549 693602 WARN ZookeeperFull|LearnerHandler-/10.10.34.12:35276:Leader@574: Commiting zxid 0x300000000 from /10.10.34.11:2888 not first!
+72,WARN,HadoopFull,0,could not delete _temporary — безобидная уборка,151017 154112 93771 WARN HadoopFull|org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: Could not delete hdfs://msra-sa-41:9000/pageout/out1/_temporary/1/_temporary/attempt_1445062781478_0011_m_000007_1
+73,WARN,Zookeeper,0,ZK connection broken (выборы) — рутина,"150729 191324 648116 WARN Zookeeper|RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762: Connection broken for id 188978561024, my id = 1, error ="
+74,WARN,Hadoop,0,lease renew retry — самовосстановление,151018 180527 494724 WARN Hadoop|org.apache.hadoop.hdfs.LeaseRenewer: Failed to renew lease for [DFSClient_NONMAPREDUCE_1537864556_1] for 30 seconds.  Will retry shortly ...
+75,WARN,HadoopFull,0,could not parse old history — безобидно при recovery,151017 155328 878758 WARN HadoopFull|org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Could not parse the old history file. Will not have old AMinfos
+76,WARN,BGL,0,PrepareForService — ПЛАНОВОЕ обслуживание,"051203 092959 630999 WARN BGL|NULL.HARDWARE: PrepareForService shutting down Node card(mLctn(R10-M1-N2), mCardSernum(203231503833343000000000594c31304b34323934303257), mLp(FF:F2:9F:16:E0:DA:00:0D:60:E9:1F:25), mIp(10.1.1.164), mType(4)) as part of Service Action 648"
+77,WARN,BGL,1,,050628 095339 977619 WARN BGL|NULL.DISCOVERY: Node card is not fully functional
+78,WARN,BGL,0,PrepareForService — плановое обслуживание,"050805 102313 262593 WARN BGL|NULL.HARDWARE: PrepareForService shutting down NodeCard(mLctn(R25-M1-N2), mCardSernum(203231503833343000000000594c31304b34333431303158), mLp(FF:F2:9F:16:CF:0F:00:0D:60:E9:30:F0), mIp(10.2.2.80), mType(4)) as part of Service Action 310"
+79,WARN,Zookeeper,0,"end of stream — отключение клиента, рутина",150729 195205 402846 WARN Zookeeper|NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@349: caught end of stream exception
+80,WARN,Zookeeper,0,connection from old client — информационно,150730 161201 990712 WARN Zookeeper|NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@793: Connection request from old client /10.10.34.19:33442; will be dropped if server is in r-o mode
+81,WARN,Hadoop,0,address change — сетевая информация,151018 180527 494724 WARN Hadoop|org.apache.hadoop.ipc.Client: Address change detected. Old: msra-sa-41/10.190.173.170:9000 New: msra-sa-41:9000
+82,WARN,Hadoop,1,,151018 180557 790847 WARN Hadoop|org.apache.hadoop.hdfs.DFSClient: DFSOutputStream ResponseProcessor exception  for block BP-1347369012-10.190.173.170-1444972147527:blk_1073743512_2731
+83,WARN,Zookeeper,0,send worker leaving — жизненный цикл потока,150729 190429 169263 WARN Zookeeper|SendWorker:188978561024:QuorumCnxManager$SendWorker@688: Send worker leaving thread
+84,WARN,Zookeeper,0,interrupted waiting on queue — рутина,150729 190429 103727 WARN Zookeeper|SendWorker:188978561024:QuorumCnxManager$SendWorker@679: Interrupted while waiting for message on queue
+85,WARN,Zookeeper,0,GOODBYE — рутинное закрытие соединения ZK,150730 234322 864029 WARN Zookeeper|LearnerHandler-/10.10.34.12:35276:LearnerHandler@575: ******* GOODBYE /10.10.34.12:35276 ********
+86,WARN,ZookeeperFull,1,,150730 175238 947887 WARN ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Follower@89: Exception when following the leader
+87,INFO,HDFS,0,,081109 234110 26 INFO HDFS|dfs.FSNamesystem: BLOCK* NameSystem.allocateBlock: /user/root/sortrand/_temporary/_task_200811092030_0002_r_000296_0/part-00296. blk_-6620182933895093708
+88,INFO,HadoopFull,1,socket reader threw exception — исключение (INFO!),151017 154112 545482 INFO HadoopFull|org.apache.hadoop.ipc.Server: Socket Reader #1 for port 47468: readAndProcess from client 10.190.173.170 threw exception [java.io.IOException: An existing connection was forcibly closed by the remote host]
+89,INFO,Hadoop,0,,151018 180153 942214 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: job_1445144423722_0020Job Transitioned from SETUP to RUNNING
+90,INFO,ZookeeperFull,0,,150729 174228 75114 INFO ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Learner@85: TCP NoDelay set to: true
+91,INFO,BGL,1,missing fields in node map file — ошибка конфигурации (INFO!),050705 122211 591331 INFO BGL|RAS.KERNEL: ciod: Missing or invalid fields on line 1 of node map file /home/auselton/bgl/64mps.sequential.mapfile
+92,INFO,ZookeeperFull,0,,150729 174141 980125 INFO ZookeeperFull|main:QuorumPeerConfig@101: Reading configuration from: /etc/zookeeper/conf/zoo.cfg
+93,INFO,Hadoop,0,,151018 180451 687506 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: All maps assigned. Ramping up all remaining reduces:1
+94,INFO,HadoopFull,0,,151017 155328 878758 INFO HadoopFull|org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Previous history file is at hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445062781478_0013/job_1445062781478_0013_1.jhist
+95,INFO,BGL,0,,051108 111859 477539 INFO BGL|RAS.KERNEL: iar 001061b4 dear 0247017c
+96,INFO,Zookeeper,0,user-level KeeperException NodeExists — безобидно,150729 193727 734568 INFO Zookeeper|ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@627: Got user-level KeeperException when processing sessionid:0x34ed93485090001 type:create cxid:0x55b8bb0f zxid:0x100000010 txntype:-1 reqpath:n/a Error Path:/home/curi/.zookeeper Error:KeeperErrorCode = NodeExists for /home/curi/.zookeeper
+97,INFO,Spark,0,,170609 201048 237741 INFO Spark|executor.Executor: Finished task 3.0 in stage 0.0 (TID 3). 2703 bytes result sent to driver
+98,INFO,HDFS,0,,081109 204655 556 INFO HDFS|dfs.DataNode$PacketResponder: Received block blk_3587508140051953248 of size 67108864 from /10.251.42.84
+99,INFO,Zookeeper,0,,150730 181802 506345 INFO Zookeeper|ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@476: Processed session termination for sessionid: 0x14ede63a5a70002
+100,INFO,Hadoop,0,,151018 180451 687506 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold reached. Scheduling reduces.
+101,INFO,ZookeeperFull,0,,150729 174228 934618 INFO ZookeeperFull|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100: Server environment:os.version=3.16.0-30-generic
+102,INFO,HadoopFull,0,,151017 153811 878758 INFO HadoopFull|org.apache.hadoop.mapred.MapTask: bufstart = 0; bufend = 48233939; bufvoid = 104857600
+103,INFO,BGL,1,critical input interrupt: warning torus z- wire — аппаратное предупреждение (INFO!),051025 085540 255740 INFO BGL|RAS.KERNEL: critical input interrupt (unit=0x0b bit=0x0b): warning for torus z- wire
+104,INFO,BGL,0,summary: 0 critical interrupts — телеметрия,"051201 063528 447728 INFO BGL|RAS.KERNEL: 10722 total interrupts. 0 critical input interrupts. 0 microseconds total spent on critical input interrupts, 0 microseconds max time in a critical input interrupt."
+105,INFO,BGL,1,VPD check mismatch — аппаратная нестыковка (INFO!),"050902 155054 701454 INFO BGL|NULL.DISCOVERY: Node card VPD check: U11 node in processor card slot J18 do not match. VPD ecid 04CC81389C2FFFFF03071B7048DF, found 04D780871F2FFFFF08031BD046E2"
+106,INFO,Zookeeper,0,,150730 234323 56422 INFO Zookeeper|QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumPeer@670: LOOKING
+107,INFO,Zookeeper,0,,150731 153624 825502 INFO Zookeeper|LearnerHandler-/10.10.34.13:59348:LearnerHandler@263: Follower sid: 3 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@33557fe4
+108,INFO,Hadoop,0,"processing TASK_ABORT event — обработка события, рутина",151018 180626 93771 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventHandler: Processing the event EventType: TASK_ABORT
+109,INFO,HDFS,0,,081109 205931 13 INFO HDFS|dfs.DataBlockScanner: Verification succeeded for blk_-4980916519894289629
+110,INFO,BGL,0,,051104 095146 126706 INFO BGL|RAS.KERNEL: iar 00106834 dear 0245cd0c
+111,INFO,BGL,0,,050828 021332 220412 INFO BGL|RAS.KERNEL: iar 00149fc0 dear 00739d98
+112,INFO,Zookeeper,0,,150818 160918 754544 INFO Zookeeper|LearnerHandler-/10.10.34.11:49928:Leader@598: Have quorum of supporters; starting up and setting last processed zxid: 0xb00000000
+113,INFO,BGL,0,,051104 155456 148496 INFO BGL|RAS.KERNEL: iar 00106204 dear 02f75edc
+114,INFO,BGL,0,"torus pipe error detected AND corrected — самоисправлено, безобидно",050903 000153 730913 INFO BGL|RAS.KERNEL: 1 torus receiver x+ input pipe error(s) (dcr 0x02ec) detected and corrected
+115,INFO,Zookeeper,0,,150729 213445 302461 INFO Zookeeper|CommitProcessor:1:ZooKeeperServer@595: Established session 0x14ed93111f20027 with negotiated timeout 10000 for client /10.10.34.13:37177
+116,INFO,Hadoop,0,,151018 180153 942214 INFO Hadoop|org.apache.hadoop.yarn.util.RackResolver: Resolved MSRA-SA-39.fareast.corp.microsoft.com to /default-rack
+117,INFO,BGL,0,,051104 142011 142811 INFO BGL|RAS.KERNEL: iar 001066ac dear 025252bc
+118,INFO,BGL,0,,050828 031727 224247 INFO BGL|RAS.KERNEL: iar 00149ee0 dear 0099e5e8
+119,INFO,BGL,0,,050826 120829 83309 INFO BGL|RAS.KERNEL: iar 003a9260 dear 00efcbc8
+120,INFO,Spark,0,,"170609 201040 525283 INFO Spark|spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(yarn, curi); users with modify permissions: Set(yarn, curi)"
+121,INFO,BGL,1,VPD all-zeros — сбой чтения VPD (INFO!),"050802 175813 30693 INFO BGL|NULL.DISCOVERY: Node card VPD check: U11 node in processor card slot J16 do not match. VPD ecid 04DF80A7942FFFFF0C081AE08CD2, found 0000000000000000000000000000"
+122,INFO,Hadoop,0,,151018 180148 878758 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Executing with tokens:
+123,INFO,HDFS,0,,081110 211541 18 INFO HDFS|dfs.DataNode: 10.250.15.198:50010 Starting thread to transfer block blk_4292382298896622412 to 10.250.15.240:50010
+124,INFO,Zookeeper,0,,150729 213924 385719 INFO Zookeeper|NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197: Accepted socket connection from /10.10.34.13:37196
+125,INFO,Hadoop,0,,151018 180151 878758 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Input size for job job_1445144423722_0020 = 1256521728. Number of splits = 10
+126,INFO,Hadoop,0,,151018 180154 687506 INFO Hadoop|org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Before Scheduling: PendingReds:1 ScheduledMaps:10 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:0 ContRel:0 HostLocal:0 RackLocal:0
+127,INFO,HadoopFull,0,,151017 153958 878758 INFO HadoopFull|org.apache.hadoop.mapred.MapTask: Starting flush of map output
+128,INFO,BGL,0,,051110 230409 692649 INFO BGL|RAS.KERNEL: iar 00106298 dear 02f7a18c
+129,INFO,HadoopFull,0,,151017 154433 616758 INFO HadoopFull|org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Assigning MININT-FNANLI5.fareast.corp.microsoft.com:13562 with 1 to fetcher#1
+130,INFO,Spark,0,,170609 201057 159067 INFO Spark|mapred.SparkHadoopMapRedUtil: attempt_201706092018_0024_m_000004_1026: Committed
+131,INFO,BGL,0,,050826 122252 84172 INFO BGL|RAS.KERNEL: iar 003a92a0 dear 013611f8

@@ -8,8 +8,11 @@ import numpy as np
 import pandas as pd
 
 LOG_LINE_RE = re.compile(
-    r"^(\d{6})\s+(\d{6})\s+(\d+)\s+(INFO|WARN|ERROR|DEBUG|FATAL)\s+(.+)$"
+    r"^(\d{6})\s+(\d{6})\s+(\d+)\s+(INFO|WARNING|WARN|ERROR|DEBUG|FATAL)\s+(.+)$"
 )
+# Разные источники пишут уровень по-разному (например, MOEX-коллектор — WARNING).
+# Приводим к каноническому набору, на который рассчитаны LEVEL_SCORE и x_ctx.
+LEVEL_ALIASES = {"WARNING": "WARN"}
 BLOCK_RE = re.compile(r"\bblk_(-?\d+)\b")
 SIZE_RE = re.compile(r"\bsize\s+(\d+)\b")
 SRC_IP_RE = re.compile(r"\bsrc:\s*/(\d{1,3}(?:\.\d{1,3}){3})")
@@ -32,6 +35,15 @@ EVENT_PATTERNS = [
     ("packet_responder_terminating", r"PacketResponder .* terminating"),
     ("verification_succeeded", r"Verification succeeded"),
     ("deleting_block", r"\bDeleting block\b"),
+    # --- новые MOEX ---
+    ("moex_timeout",        r"timeout:.*ticker="),
+    ("moex_price_spike",    r"price_spike:.*change_pct="),
+    ("moex_price_jump",     r"price_jump:.*change_pct="),
+    ("moex_slow_response",  r"slow_response:.*elapsed_ms="),
+    ("moex_empty_data",     r"empty_price_response:"),
+    ("moex_conn_error",     r"connection_failed:"),
+    ("moex_price_ok",       r"price_ok:"),
+
 ]
 
 KB_BASE_SEVERITY = {
@@ -45,6 +57,14 @@ KB_BASE_SEVERITY = {
     "packet_responder_terminating": 0.06,
     "verification_succeeded": 0.04,
     "other": 0.15,
+    # --- новые MOEX ---
+    "moex_timeout":        0.85,  # таймаут = торги могут прерваться
+    "moex_price_spike":    0.90,  # скачок цены = возможный сбой данных
+    "moex_price_jump":     0.65,  # резкое движение = подозрительно
+    "moex_slow_response":  0.50,  # медленно, но работает
+    "moex_empty_data":     0.75,  # нет данных = проблема
+    "moex_conn_error":     0.95,  # нет соединения = критично
+    "moex_price_ok":       0.05,  # всё нормально
 }
 
 LEVEL_SCORE = {"DEBUG": 0.05, "INFO": 0.12, "WARN": 0.72, "ERROR": 0.92, "FATAL": 1.0}
@@ -106,6 +126,7 @@ def parse_log_line(line: str) -> dict:
         }
 
     date, time, pid, level, rest = match.groups()
+    level = LEVEL_ALIASES.get(level, level)
     if ": " in rest:
         component, message = rest.split(": ", 1)
     else:
